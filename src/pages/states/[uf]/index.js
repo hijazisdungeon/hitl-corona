@@ -3,14 +3,19 @@ import React from 'react';
 
 import Layout from '~/layouts/Information';
 
+import Head from '~/components/Head';
 import List from '~/components/List';
 
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
-const StatesInformationPage = ({ state }) => (
+const StateInformationPage = ({ state }) => (
   <Layout>
-    {/* <StateInformationMeta state={state.state} uf={state.uf} /> */}
+    <Head
+      title={`Covid Agora - ${state.state}`}
+      description="Veja como anda o coronavírus em seu estado, e avise a seus familiares."
+      image={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+    />
 
     <List
       local={`${state.state} - ${state.uf}`}
@@ -21,7 +26,7 @@ const StatesInformationPage = ({ state }) => (
   </Layout>
 );
 
-StatesInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
+StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
 
   if (data.error) {
@@ -38,12 +43,12 @@ StatesInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   return { state };
 };
 
-StatesInformationPage.propTypes = {
+StateInformationPage.propTypes = {
   state: PropTypes.shape({
-    state: PropTypes.string.isRequired,
-    uf: PropTypes.string.isRequired,
-    datetime: PropTypes.instanceOf(Date),
+    state: PropTypes.string,
+    uf: PropTypes.string,
+    datetime: PropTypes.string,
   }).isRequired,
 };
 
-export default StatesInformationPage;
+export default StateInformationPage;

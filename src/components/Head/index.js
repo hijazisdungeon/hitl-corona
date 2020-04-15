@@ -14,8 +14,8 @@ const HeadComponent = ({
     <NextHead>
       <title>{title}</title>
 
-      <link rel="shortcut icon" href="/static/images/icon.png" />
-      <link rel="icon" href="/static/images/icon.png" />
+      <link rel="shortcut icon" href="/icon.png" />
+      <link rel="icon" href="/icon.png" />
 
       {/* Site Verification */}
 
