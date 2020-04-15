@@ -9,8 +9,6 @@ import Head from '~/components/Head';
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
-import BrazilImageFlag from '../../../public/static/images/br_flag.jpg';
-
 const BrazilPage = ({ info }) => (
   <Layout>
     <Head
@@ -20,7 +18,7 @@ const BrazilPage = ({ info }) => (
 
     <List
       local="Brazil"
-      flag={BrazilImageFlag}
+      flag="/static/images/br_flag.jpg"
       lastUpdate={info.updated_at}
       info={info}
     />
