@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /404
+
+Sitemap: https://nowcovid.tk/sitemap.xml
