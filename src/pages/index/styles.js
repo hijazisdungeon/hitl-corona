@@ -39,7 +39,7 @@ export const Content = styled.div`
 
 export const StatesButton = styled(Link)`
   display: flex;
-  margin-top: 55px;
+  margin-top: 15px;
   padding: 2rem;
 
   align-items: center;
@@ -52,6 +52,10 @@ export const StatesButton = styled(Link)`
   color: #fff;
   background-color: #1db954;
   transition: filter 300ms;
+
+  .countries {
+    color: #ed3232;
+  }
 
   svg {
     margin-left: 6px;
