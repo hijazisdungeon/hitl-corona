@@ -27,20 +27,26 @@ const StateInformationPage = ({ state }) => (
 );
 
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
-  const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
-
-  if (data.error) {
+  const back = () => {
     res.writeHead(301, { Location: '/states' });
     return res.end();
+  };
+
+  try {
+    const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
+
+    if (data.error) back();
+
+    return {
+      state: objectLocaleString({
+        ...data,
+        cases: data.suspects,
+        confirmed: data.cases,
+      }),
+    };
+  } catch (e) {
+    back();
   }
-
-  const state = objectLocaleString({
-    ...data,
-    cases: data.suspects,
-    confirmed: data.cases,
-  });
-
-  return { state };
 };
 
 StateInformationPage.propTypes = {

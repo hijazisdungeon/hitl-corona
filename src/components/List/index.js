@@ -5,7 +5,7 @@ import React from 'react';
 
 import { Container, Header, ItemsContainer, Item } from './styles';
 
-const ListComponent = ({ local, flag, info, lastUpdate }) => (
+const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
   <Container>
     <Header>
       <h1>COVID-19 ({local})</h1>

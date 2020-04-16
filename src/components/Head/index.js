@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const HeadComponent = ({
-  title,
+  title = 'Covid Agora',
   description,
   url,
   image,

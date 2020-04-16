@@ -10,24 +10,29 @@ import api from '~/services/api';
 
 import { Container } from './styles';
 
-const StatesPage = ({ states = [] }) => (
+const StatesPage = ({ states }) => (
   <>
     <Head
       title="Covid Agora - Selecionar Estado"
       description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
     />
 
-    <Layout loading={!states.length}>
+    <Layout loading={!states}>
       <Container>
-        {states.map(state => (
-          <Link key={state.state} href={`/states/${state.uf}`}>
-            <span>{state.state}</span>
-            <img
-              src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-              alt="State Flag"
-            />
-          </Link>
-        ))}
+        {states &&
+          states.map(state => (
+            <Link
+              key={state.state}
+              href="/states/[uf]"
+              as={`/states/${state.uf}`}
+            >
+              <span>{state.state}</span>
+              <img
+                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+                alt="State Flag"
+              />
+            </Link>
+          ))}
       </Container>
     </Layout>
   </>
@@ -36,9 +41,7 @@ const StatesPage = ({ states = [] }) => (
 StatesPage.getInitialProps = async () => {
   const { data } = await api.get('').then(r => r.data);
 
-  const states = data.sort((a, b) => a.state.localeCompare(b.state));
-
-  return { states };
+  return { states: data.sort((a, b) => a.state.localeCompare(b.state)) };
 };
 
 StatesPage.propTypes = {

@@ -3,38 +3,32 @@ import React from 'react';
 
 import Layout from '~/layouts/Information';
 
-import List from '~/components/List';
 import Head from '~/components/Head';
+import List from '~/components/List';
 
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const BrazilPage = ({ info }) => (
-  <Layout>
+  <Layout loading={!info}>
     <Head
-      title="Covid Agora - Dados do Brasil"
-      description="Fique atualizado sobre o número total de casos no Brasil."
+      title="Covid Agora - Brasil"
+      description="Acompanhe como anda a real situação do coronavírus no Brasil."
     />
 
     <List
       local="Brazil"
       flag="/static/images/br_flag.jpg"
-      lastUpdate={info.updated_at}
+      lastUpdate={info && info.updated_at}
       info={info}
     />
   </Layout>
 );
 
-BrazilPage.getInitialProps = async ({ res }) => {
+BrazilPage.getInitialProps = async () => {
   const { data } = await api.get('brazil').then(r => r.data);
 
-  if (data.error) {
-    res.writeHead(301, { Location: '/brazil' });
-    return res.end();
-  }
-  const info = objectLocaleString(data);
-
-  return { info };
+  return { info: objectLocaleString(data) };
 };
 
 BrazilPage.propTypes = {
