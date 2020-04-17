@@ -30,13 +30,13 @@ const StateInformationPage = ({ state }) => (
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   const back = () => {
     res.writeHead(301, { Location: '/404' });
-    res.end();
+    return res.end();
   };
 
   try {
     const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
 
-    if (data.error) back();
+    if (data.error) return back();
 
     return {
       state: objectLocaleString({
