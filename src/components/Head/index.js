@@ -5,7 +5,6 @@ import React from 'react';
 const HeadComponent = ({
   title = 'Covid Agora',
   description,
-  url,
   image,
   noDefaultTags,
   children,
@@ -29,7 +28,6 @@ const HeadComponent = ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
 
-        {!!url && <meta property="og:url" content={url} />}
         {!!image && <meta property="og:image" content={image} />}
       </>
     )}
@@ -41,7 +39,6 @@ const HeadComponent = ({
 HeadComponent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  url: PropTypes.string,
   image: PropTypes.string,
   noDefaultTags: PropTypes.bool,
   children: PropTypes.node,
@@ -50,7 +47,6 @@ HeadComponent.propTypes = {
 HeadComponent.defaultProps = {
   description:
     'Dados mundial, nacional e regional do coronavírus na palma da sua mão. Dados oficiais e atualizados em tempo real, garantindo a veracidade e a qualidade do serviço, entregando a melhor experiência ao usuário.',
-  url: '',
   image: '',
   noDefaultTags: false,
   children: null,
