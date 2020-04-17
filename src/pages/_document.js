@@ -49,6 +49,12 @@ export default class MyDocument extends Document {
             href="/static/css/styles.css"
           />
 
+          <script
+            data-ad-client="ca-pub-7405165869103100"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
+
           {styleElements}
         </Head>
 
