@@ -26,6 +26,11 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#006daa" />
           <meta name="author" content="SweetCode Team" />
 
+          <meta
+            name="google-site-verification"
+            content="pM-_hXQlR94l1q9dozcKmCGq-Rb5Lh--O0vQlb8NYPg"
+          />
+
           <link rel="icon" href="/icon.png" />
 
           <link
