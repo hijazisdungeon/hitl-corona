@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build",
+    "dev": "next dev",
+    "start": "cross-env NODE_ENV=production next start",
+    "build": "cross-env NODE_ENV=production next build",
+    "prebuild": "cross-env rimraf __next",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
     "prettier": "prettier --check src/**/*.{js,jsx}",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "babel-plugin-root-import": "^6.5.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
