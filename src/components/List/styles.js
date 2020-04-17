@@ -42,18 +42,18 @@ export const ItemsContainer = styled.div`
 export const Item = styled.div`
   margin: 40px 0;
 
-  strong {
+  p {
     font-size: 6rem;
     font-weight: bold;
   }
 
-  p {
+  span {
     font-size: 2rem;
     font-weight: bold;
   }
 
   &:first-child {
-    strong {
+    p {
       font-size: 8rem;
     }
   }

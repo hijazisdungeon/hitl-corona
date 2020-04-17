@@ -10,19 +10,21 @@ import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const BrazilPage = ({ info }) => (
-  <Layout loading={!info}>
+  <>
     <Head
       title="Covid Agora - Brasil"
       description="Acompanhe como anda a real situação do coronavírus no Brasil."
     />
 
-    <List
-      local="Brazil"
-      flag="/static/images/br_flag.jpg"
-      lastUpdate={info && info.updated_at}
-      info={info}
-    />
-  </Layout>
+    <Layout loading={!info}>
+      <List
+        local="Brazil"
+        flag="/static/images/br_flag.jpg"
+        lastUpdate={info && info.updated_at}
+        info={info}
+      />
+    </Layout>
+  </>
 );
 
 BrazilPage.getInitialProps = async () => {
@@ -33,7 +35,6 @@ BrazilPage.getInitialProps = async () => {
 
 BrazilPage.propTypes = {
   info: PropTypes.shape({
-    info: PropTypes.string,
     updated_at: PropTypes.string,
   }).isRequired,
 };

@@ -1,12 +1,15 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.header`
+  display: flex;
   position: absolute;
   z-index: 999;
   width: 100%;
   top: 0;
   padding: 0 80px;
 
+  align-items: center;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.3);
 
   a {
@@ -16,8 +19,35 @@ export const Container = styled.header`
   }
 
   @media (max-width: 1024px) {
+    flex-direction: column;
     padding: 0;
     background: transparent;
+  }
+`;
+
+export const BrandsContainer = styled.div`
+  margin-right: 30px;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin-right: 0;
+    padding: 0 20px;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006daa;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;
 
@@ -140,12 +170,6 @@ export const DownloadContainer = styled.div`
 
 export const ResponsiveContainer = styled.div`
   display: none;
-  width: 100%;
-  height: 60px;
-  padding: 0 20px;
-
-  align-items: center;
-  background-color: #006daa;
 
   @media (max-width: 1024px) {
     display: flex;

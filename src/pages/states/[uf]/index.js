@@ -26,10 +26,11 @@ const StateInformationPage = ({ state }) => (
   </Layout>
 );
 
+// eslint-disable-next-line consistent-return
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   const back = () => {
     res.writeHead(301, { Location: '/states' });
-    return res.end();
+    res.end();
   };
 
   try {

@@ -9,36 +9,34 @@ const HeadComponent = ({
   image,
   noDefaultTags,
   children,
-}) => {
-  return (
-    <NextHead>
-      <title>{title}</title>
+}) => (
+  <NextHead>
+    <title>{title}</title>
 
-      <link rel="shortcut icon" href="/icon.png" />
-      <link rel="icon" href="/icon.png" />
+    <link rel="shortcut icon" href="/icon.png" />
+    <link rel="icon" href="/icon.png" />
 
-      {/* Site Verification */}
+    {/* Site Verification */}
 
-      {!noDefaultTags && (
-        <>
-          <meta property="og:locale" content="pt_BR" />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Covid Agora" />
+    {!noDefaultTags && (
+      <>
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Covid Agora" />
 
-          <meta name="description" content={description} />
+        <meta name="description" content={description} />
 
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
 
-          {!!url && <meta property="og:url" content={url} />}
-          {!!image && <meta property="og:image" content={image} />}
-        </>
-      )}
+        {!!url && <meta property="og:url" content={url} />}
+        {!!image && <meta property="og:image" content={image} />}
+      </>
+    )}
 
-      {children}
-    </NextHead>
-  );
-};
+    {children}
+  </NextHead>
+);
 
 HeadComponent.propTypes = {
   title: PropTypes.string.isRequired,

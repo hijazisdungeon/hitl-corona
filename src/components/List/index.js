@@ -15,31 +15,33 @@ const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
 
     <ItemsContainer>
       <Item>
-        <strong style={{ color: '#3baa1b' }}>{info.confirmed}</strong>
-        <p>CASOS COMFIRMADOS</p>
+        <p style={{ color: '#3baa1b' }}>{info.confirmed}</p>
+        <span>CASOS COMFIRMADOS</span>
       </Item>
 
       <Item>
-        <strong style={{ color: '#eac822' }}>{info.cases}</strong>
-        <p>SUSPEITOS</p>
+        <p style={{ color: '#eac822' }}>{info.cases}</p>
+        <span>SUSPEITOS</span>
       </Item>
 
       <Item>
-        <strong style={{ color: '#d51616' }}>{info.deaths}</strong>
-        <p>ÓBITOS</p>
+        <p style={{ color: '#d51616' }}>{info.deaths}</p>
+        <span>ÓBITOS</span>
       </Item>
 
       {info.recovered && (
         <Item>
-          <strong style={{ color: '#1678d5' }}>{info.recovered}</strong>
-          <p>CURADOS</p>
+          <p style={{ color: '#1678d5' }}>{info.recovered}</p>
+          <span>CURADOS</span>
         </Item>
       )}
     </ItemsContainer>
 
-    <p style={{ fontSize: '1rem' }}>
-      <strong>Ùltima Atualização: </strong>
-      {moment(lastUpdate).locale('pt-br', localization).format('LLL')}
+    <p style={{ fontSize: '1.3rem' }}>
+      Ùltima Atualização:{' '}
+      <strong>
+        {moment(lastUpdate).locale('pt-br', localization).format('LLL')}
+      </strong>
     </p>
   </Container>
 );

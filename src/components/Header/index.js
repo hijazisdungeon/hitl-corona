@@ -5,6 +5,7 @@ import Link from '../Link';
 
 import {
   Container,
+  BrandsContainer,
   ResponsiveContainer,
   ResponsiveButton,
   Content,
@@ -19,11 +20,17 @@ const HeaderComponent = () => {
 
   return (
     <Container>
-      <ResponsiveContainer>
-        <ResponsiveButton open={navbarOpen} onClick={handleNavigationButton}>
-          <span /> <span /> <span />
-        </ResponsiveButton>
-      </ResponsiveContainer>
+      <BrandsContainer>
+        <Link href="/">
+          <img src="/static/images/sweet_logo.png" alt="SweetCode Logo" />
+        </Link>
+
+        <ResponsiveContainer>
+          <ResponsiveButton open={navbarOpen} onClick={handleNavigationButton}>
+            <span /> <span /> <span />
+          </ResponsiveButton>
+        </ResponsiveContainer>
+      </BrandsContainer>
 
       <Content open={navbarOpen}>
         <Navigation>

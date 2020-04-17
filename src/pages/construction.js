@@ -5,7 +5,7 @@ import Layout from '~/layouts/Default';
 
 import Head from '~/components/Head';
 
-import { Container, Content, BackButton } from './styles';
+import { Container, Content, BackButton } from '~/styles/pages/construction';
 
 const InBuildingPage = () => (
   <Layout>

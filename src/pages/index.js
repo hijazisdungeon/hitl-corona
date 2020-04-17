@@ -5,7 +5,7 @@ import Layout from '~/layouts/Default';
 
 import Head from '~/components/Head';
 
-import { Container, Content, StatesButton } from './styles';
+import { Container, Content, StatesButton } from '~/styles/pages/index';
 
 const HomePage = () => (
   <Layout>
@@ -23,9 +23,6 @@ const HomePage = () => (
         </h1>
 
         <StatesButton href="/states">
-          Selecionar Estado <FiArrowRight size="3rem" />
-        </StatesButton>
-        <StatesButton className="countries" href="/countries">
           Selecionar Estado <FiArrowRight size="3rem" />
         </StatesButton>
       </Content>

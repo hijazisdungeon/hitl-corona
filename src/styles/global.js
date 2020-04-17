@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import '~/assets/css/normalize.css';
-
 export default createGlobalStyle`
   * {
     word-wrap: break-word;

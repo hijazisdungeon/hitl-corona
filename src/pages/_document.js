@@ -33,6 +33,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/normalize.css"
+          />
+
           {styleElements}
         </Head>
 

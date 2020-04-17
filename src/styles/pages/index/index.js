@@ -8,8 +8,7 @@ export const Container = styled.section`
   padding: 20px;
   text-align: center;
 
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgb(0, 0, 0)),
-    url('/static/images/bg_home.jpg') no-repeat;
+  background: url('/static/images/bg_home.jpg') no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -39,8 +38,8 @@ export const Content = styled.div`
 
 export const StatesButton = styled(Link)`
   display: flex;
-  margin-top: 15px;
-  padding: 2rem;
+  margin-top: 60px;
+  padding: 1.8rem 2rem;
 
   align-items: center;
   justify-content: center;
@@ -48,20 +47,19 @@ export const StatesButton = styled(Link)`
   font-size: 2.2rem;
   font-weight: 600;
 
-  border-radius: 4rem;
+  /* border-radius: 4rem; */
   color: #fff;
-  background-color: #1db954;
-  transition: filter 300ms;
-
-  .countries {
-    color: #ed3232;
-  }
+  background-color: #ed7d15;
+  box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 300ms;
 
   svg {
     margin-left: 6px;
   }
 
   &:hover {
-    filter: brightness(85%);
+    /* filter: brightness(85%); */
+
+    box-shadow: 0 0 12px 4px rgba(237, 125, 21, 0.6);
   }
 `;
