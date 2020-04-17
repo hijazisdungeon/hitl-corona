@@ -29,7 +29,7 @@ const StateInformationPage = ({ state }) => (
 // eslint-disable-next-line consistent-return
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   const back = () => {
-    res.writeHead(301, { Location: '/states' });
+    res.writeHead(301, { Location: '/404' });
     res.end();
   };
 

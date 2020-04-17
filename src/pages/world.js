@@ -14,6 +14,7 @@ const WorldPage = ({ info }) => (
     <Head
       title="Covid Agora - Mundo"
       description="Acompanhe como anda a real situação do coronavírus no mundo."
+      image="/static/images/world.png"
     />
 
     <Layout loading={!info}>

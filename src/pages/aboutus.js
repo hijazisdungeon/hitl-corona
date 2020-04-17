@@ -44,8 +44,9 @@ const AboutUsPage = () => {
   return (
     <>
       <Head
-        title="Sobre Nós"
+        title="Covid Agora - Sobre Nós"
         description="Equipe responsavel pelo desenvolvimento da plataforma"
+        image="/static/images/bg_team.jpg"
       />
 
       <Layout loading={!members.length}>

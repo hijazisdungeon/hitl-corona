@@ -9,7 +9,7 @@ import { Container, Content, StatesButton } from '~/styles/pages/index';
 
 const HomePage = () => (
   <Layout>
-    <Head title="Covid Agora - Início">
+    <Head title="Covid Agora - Início" image="/static/images/icon.png">
       <meta
         name="keywords"
         content="covid, covid19, coronavirus, brazil, world"
