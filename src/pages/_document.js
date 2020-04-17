@@ -6,9 +6,9 @@ export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 
-    const page = renderPage(Component => props =>
-      sheet.collectStyles(<Component {...props} />),
-    );
+    const page = renderPage(Component => props => {
+      return sheet.collectStyles(<Component {...props} />);
+    });
 
     const styleElements = sheet.getStyleElement();
     return { ...page, styleElements };
@@ -37,6 +37,11 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             type="text/css"
             href="/static/css/normalize.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/styles.css"
           />
 
           {styleElements}
