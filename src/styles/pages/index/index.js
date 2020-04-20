@@ -38,7 +38,7 @@ export const Content = styled.div`
 
 export const StatesButton = styled(Link)`
   display: flex;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 1.8rem 2rem;
 
   align-items: center;

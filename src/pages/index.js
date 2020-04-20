@@ -25,6 +25,9 @@ const HomePage = () => (
         <StatesButton href="/states">
           Selecionar Estado <FiArrowRight size="3rem" />
         </StatesButton>
+        <StatesButton href="/countries">
+          Selecionar País <FiArrowRight size="3rem" />
+        </StatesButton>
       </Content>
     </Container>
   </Layout>

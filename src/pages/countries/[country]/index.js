@@ -17,6 +17,7 @@ const CountrieInformationPage = ({ country }) => (
     />
     <List
       local={country.country}
+      flag="/static/images/world.png"
       lastUpdate={country.updated_at}
       info={country}
     />
@@ -30,6 +31,7 @@ CountrieInformationPage.getInitialProps = async ({ query: { country } }) => {
 };
 CountrieInformationPage.propTypes = {
   country: PropTypes.shape({
+    country: PropTypes.string,
     updated_at: PropTypes.string,
   }).isRequired,
 };

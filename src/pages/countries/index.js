@@ -8,7 +8,7 @@ import Link from '~/components/Link';
 
 import api from '~/services/api';
 
-import { Container } from '~/styles/pages/states';
+import { Container } from '~/styles/pages/country';
 
 const CountriesPage = ({ countries }) => (
   <>
