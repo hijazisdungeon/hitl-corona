@@ -53,7 +53,6 @@ export const Content = styled.main`
 
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   @media (max-width: 1024px) {
     min-height: calc(100vh - 130px);

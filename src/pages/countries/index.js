@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useCallback } from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 import Layout from '~/layouts/Information';
 
@@ -8,30 +9,72 @@ import Link from '~/components/Link';
 
 import api from '~/services/api';
 
-import { Container } from '~/styles/pages/country';
+import {
+  Container,
+  SearchContainer,
+  Input,
+  Content,
+} from '~/styles/pages/countries';
 
-const CountriesPage = ({ countries }) => (
-  <>
-    <Head
-      title="Covid Agora - Países"
-      description="Fique por dentro das estatisticas de cada país"
-    />
-    <Layout loading={!countries}>
-      <Container>
-        {countries &&
-          countries.map(country => (
-            <Link
-              key={country.country}
-              href="/countries/[country]"
-              as={`/countries/${country.country}`}
-            >
-              <span>{country.country}</span>
-            </Link>
-          ))}
-      </Container>
-    </Layout>
-  </>
-);
+const CountriesPage = ({ countries: allCountries }) => {
+  const [countries, setCountries] = useState(allCountries);
+
+  const handleInput = useCallback(
+    ({ target: { value } }) => {
+      const filteredCountries = allCountries.filter(({ country }) => {
+        return country.toLowerCase().includes((value || '').toLowerCase());
+      });
+
+      setCountries(filteredCountries);
+    },
+    [countries],
+  );
+
+  return (
+    <>
+      <Head
+        title="Covid Agora - Países"
+        description="Fique por dentro das estatisticas de cada país."
+      />
+
+      <Layout loading={!countries}>
+        <Container>
+          <SearchContainer>
+            <Input
+              type="text"
+              placeholder="Pesquise o país..."
+              onChange={handleInput}
+            />
+
+            <span>
+              <AiOutlineSearch size="2.5rem" />
+            </span>
+          </SearchContainer>
+
+          {countries && countries.length ? (
+            <Content>
+              {countries.map(country => (
+                <Link
+                  key={country.country}
+                  href="/countries/[country]"
+                  as={`/countries/${country.country}`}
+                >
+                  <span>{country.country}</span>
+
+                  <img src="/static/images/world.png" alt="World" />
+                </Link>
+              ))}
+            </Content>
+          ) : (
+            <h1 style={{ color: '#000', marginTop: '30px' }}>
+              Nenhum estado encontrado!
+            </h1>
+          )}
+        </Container>
+      </Layout>
+    </>
+  );
+};
 
 CountriesPage.getInitialProps = async () => {
   const { data } = await api.get('countries').then(r => r.data);
