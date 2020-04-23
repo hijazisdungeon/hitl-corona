@@ -124,13 +124,13 @@ export const RowItem = styled.div`
 
 export const Button = styled(Link)`
   display: flex;
-  width: 4rem;
+  width: 10rem;
   height: 4rem;
 
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 12%;
   box-shadow: 0 4px 15px 8px rgba(6, 26, 64, 0.35);
   background-color: #061a40;
   color: #fff;

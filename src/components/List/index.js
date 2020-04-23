@@ -3,8 +3,6 @@ import localization from 'moment/locale/pt-br';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-
-
 import { Container, Header, ItemsContainer, Item } from './styles';
 
 const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
