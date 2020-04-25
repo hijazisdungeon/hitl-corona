@@ -29,7 +29,6 @@ const InformationLayout = ({ children, loading }) => {
           </span>
         </Link>
       </Header>
-
       <Content>{loading ? <Spinner /> : children}</Content>
     </>
   );
