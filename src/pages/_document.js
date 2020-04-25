@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
 
           <meta
             name="google-site-verification"
-            content="pM-_hXQlR94l1q9dozcKmCGq-Rb5Lh--O0vQlb8NYPg"
+            content="oHUSQuGp0QY-4Jsq-xLa1C2tLsLeDLLOtW37SMTuJI8"
           />
 
           <link rel="icon" href="/icon.png" />
