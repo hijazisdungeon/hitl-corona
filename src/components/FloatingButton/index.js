@@ -8,7 +8,7 @@ import { Container, FloatingButton } from './styles';
 
 const FloatingButtonComponent = () => {
   const dispatch = useDispatch();
-  const theme = useSelector(state => state.config.theme);
+  const theme = useSelector(state => state.theme);
 
   const changeTheme = () => dispatch(setTheme({ themeName: theme.name }));
 

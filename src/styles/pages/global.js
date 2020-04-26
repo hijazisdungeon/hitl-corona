@@ -12,7 +12,7 @@ export default createGlobalStyle`
 
   body {
     font: 1.6rem 'Montserrat', sans-serif;
-    color: ${props => props.theme.color};
+    color: #fff;
     background-color: ${props => props.theme.background};
   }
 

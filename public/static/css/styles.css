@@ -9,8 +9,6 @@ html {
 
 body {
   font: 1.6rem 'Montserrat', sans-serif;
-  color: #fff;
-  background-color: #f0f0f5;
 }
 
 @media (max-width: 1024px) {
