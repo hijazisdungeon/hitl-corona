@@ -1,23 +1,24 @@
 import React from 'react';
-import { FiPlusCircle } from 'react-icons/fi';
+import { MdBrightness3, MdBrightness7 } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setTheme } from '~/store/reducers/ConfigReducer/actions';
+import { setTheme } from '~/store/reducers/config/actions';
 
-import { Container, FloatingButton } from './styles';
+import { Container } from './styles';
 
 const FloatingButtonComponent = () => {
   const dispatch = useDispatch();
-  const theme = useSelector(state => state.theme);
+  const { theme } = useSelector(state => state.config);
 
-  const changeTheme = () => dispatch(setTheme({ themeName: theme.name }));
+  const changeTheme = () => dispatch(setTheme(theme));
+
+  const Icon = theme === 'light' ? MdBrightness3 : MdBrightness7;
 
   return (
-    <Container>
-      <FloatingButton onClick={changeTheme}>
-        <FiPlusCircle size={50} color="#b9d6f2" />
-      </FloatingButton>
+    <Container onClick={changeTheme}>
+      <Icon size={50} color="#b9d6f2" />
     </Container>
   );
 };
+
 export default FloatingButtonComponent;

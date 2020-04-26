@@ -5,7 +5,6 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 import Link from '~/components/Link';
 import Spinner from '~/components/Spinner';
-import FloatingButton from '~/components/FloatingButton';
 
 import { Header, Content } from './styles';
 
@@ -30,7 +29,7 @@ const InformationLayout = ({ children, loading }) => {
           </span>
         </Link>
       </Header>
-      <FloatingButton />
+
       <Content>{loading ? <Spinner /> : children}</Content>
     </>
   );

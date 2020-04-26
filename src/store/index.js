@@ -1,15 +1,10 @@
 import { createStore } from 'redux';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { persistStore } from 'redux-persist';
 
-import rootReducer from './reducers/rootReducer';
+import persistReducers from './persistor';
+import { reducers } from './reducers';
 
-const persistedReducer = persistReducer(
-  { keyPrefix: 'covidAgora', key: 'config', storage },
-  rootReducer,
-);
-const store = createStore(persistedReducer);
-
+const store = createStore(persistReducers(reducers));
 const persistor = persistStore(store);
 
 export { store, persistor };

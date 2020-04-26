@@ -41,6 +41,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'consistent-return': 'off',
     'no-nested-ternary': 'off',
     'no-unused-expressions': 'off',
     'import/prefer-default-export': 'off',
