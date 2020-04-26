@@ -1,21 +1,21 @@
 import App from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
-// import { REHYDRATE } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from '~/styles/pages/global';
+import { store, persistor } from '~/store';
+
 import colors from '~/utils/colors';
 
-// import { store, persistor } from '~/store';
+import GlobalStyle from '~/styles/pages/global';
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Provider>
-        <PersistGate>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
           <ThemeProvider theme={colors}>
             <Component {...pageProps} />
             <GlobalStyle />

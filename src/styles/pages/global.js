@@ -12,8 +12,8 @@ export default createGlobalStyle`
 
   body {
     font: 1.6rem 'Montserrat', sans-serif;
-    color: #fff;
-    background-color: #f0f0f5;
+    color: ${props => props.theme.color};
+    background-color: ${props => props.theme.background};
   }
 
 
