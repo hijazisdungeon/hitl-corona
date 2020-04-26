@@ -62,7 +62,6 @@ const HomePage = () => (
             </Button>
           </RowItem>
         </RowContainer>
-
       </Content>
     </Container>
   </Layout>

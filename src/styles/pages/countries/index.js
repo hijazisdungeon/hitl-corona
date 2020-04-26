@@ -22,6 +22,10 @@ export const SearchContainer = styled.div`
 
     align-items: center;
     justify-content: center;
+
+    svg {
+      color: ${props => props.theme.inputIcon};
+    }
   }
 `;
 
@@ -33,7 +37,7 @@ export const Input = styled.input`
   border-radius: 4px;
   border: 2px solid rgba(255, 255, 255, 0.4);
 
-  background: #2c2f33;
+  background: ${props => props.theme.backgroundInput};
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   transition: border-color 200ms;
 
@@ -67,8 +71,8 @@ export const Content = styled.ul`
     font-size: 2rem;
     font-weight: 700;
 
-    color: #fff;
-    background-color: rgba(72, 114, 199, 0.6);
+    color: ${props => props.theme.optionsContentText};
+    background-color: ${props => props.theme.optionsContent};
     border-radius: 6px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);
     transition: transform 200ms;

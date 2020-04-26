@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   text-align: center;
-  color: #000;
+  color: ${props => props.theme.listInformationText};
 `;
 
 export const Header = styled.div`
@@ -10,7 +10,7 @@ export const Header = styled.div`
 
   h1 {
     font-size: 5rem;
-    color: #727573;
+    color: ${props => props.theme.informationTitle};
   }
 
   p {

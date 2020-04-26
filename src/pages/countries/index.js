@@ -66,7 +66,12 @@ const CountriesPage = ({ countries: allCountries }) => {
               ))}
             </Content>
           ) : (
-            <h1 style={{ color: '#000', marginTop: '30px' }}>
+            <h1
+              style={{
+                color: '#000',
+                marginTop: '30px',
+              }}
+            >
               Nenhum estado encontrado!
             </h1>
           )}
