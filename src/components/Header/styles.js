@@ -141,7 +141,6 @@ export const Navigation = styled.nav`
     }
   }
 `;
-
 export const DownloadContainer = styled.div`
   margin-left: 30px;
 
@@ -209,5 +208,42 @@ export const ResponsiveButton = styled.button`
           transform: rotate(-45deg);
         }
       `}
+  }
+`;
+
+export const Dropdown = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  button {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  span {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+`;
+
+export const DropdownItems = styled.div`
+  display: ${props => (props.open ? 'flex' : 'none')};
+  flex-direction: column;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 1;
+  margin-top: 5px;
+  top: 100%;
+  left: 0;
+  padding: 20px 0;
+
+  a {
+    padding: 20px 10px !important;
+    color: #000;
   }
 `;
