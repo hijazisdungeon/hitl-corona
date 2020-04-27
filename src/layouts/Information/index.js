@@ -18,7 +18,7 @@ const InformationLayout = ({ children, loading }) => {
     <>
       <Header>
         <button type="button" onClick={() => router.push(`/${redirectPath}`)}>
-          <FiArrowLeft size="4rem" color="#fff" />
+          <FiArrowLeft size="4rem" />
         </button>
 
         <Link href="/aboutus" target="_blank">

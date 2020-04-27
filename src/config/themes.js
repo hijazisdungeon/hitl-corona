@@ -11,6 +11,12 @@ const themes = {
 
     listInformationText: '#fff',
     informationTitle: '#fff',
+
+    headerColor: '#fff',
+    headerText: '#000',
+    headerResponsiveButton: '#000',
+    headerResponsiveBorder: '#000',
+    backgroundHeader: 'rgba(255, 255,	255, 0.9)',
   },
   light: {
     background: '#f0f0f5',
@@ -24,6 +30,12 @@ const themes = {
 
     listInformationText: '#000',
     informationTitle: '#727573',
+
+    headerColor: '#006daa',
+    headerText: '#fff',
+    headerResponsiveButton: '#fff',
+    headerResponsiveBorder: '#fff',
+    backgroundHeader: 'rgba(0, 0, 0, 0.3)',
   },
 };
 

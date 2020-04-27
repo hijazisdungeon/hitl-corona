@@ -7,7 +7,10 @@ export const Header = styled.header`
 
   align-items: center;
   justify-content: space-between;
-  background-color: #006daa;
+  background-color: ${props => props.theme.headerColor};
+  svg {
+    color: ${props => props.theme.inputIcon};
+  }
 
   a {
     display: flex;
@@ -20,7 +23,7 @@ export const Header = styled.header`
 
     span {
       margin-left: 5px;
-      color: #fff;
+      color: ${props => props.theme.headerText};
     }
 
     &:hover {

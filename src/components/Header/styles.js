@@ -10,18 +10,19 @@ export const Container = styled.header`
 
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: ${props => props.theme.backgroundHeader};
 
   a {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #fff;
+    color: ${props => props.theme.headerText};
   }
 
   @media (max-width: 1024px) {
     flex-direction: column;
     padding: 0;
     background: transparent;
+    color: ${props => props.theme.headerText};
   }
 `;
 
@@ -42,7 +43,7 @@ export const BrandsContainer = styled.div`
 
     align-items: center;
     justify-content: space-between;
-    background-color: #006daa;
+    background-color: ${props => props.theme.headerColor};
 
     img {
       width: 30px;
@@ -64,7 +65,7 @@ export const Content = styled.div`
     top: 60px;
     height: calc(100vh - 60px);
 
-    background-color: #006daa;
+    background-color: ${props => props.theme.headerColor};
     flex-direction: column;
     justify-content: center;
     transition: left 300ms;
@@ -151,7 +152,7 @@ export const DownloadContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #fff;
+    border: 1px solid ${props => props.theme.headerResponsiveBorder};
 
     svg {
       margin-left: 8px;
@@ -183,7 +184,7 @@ export const ResponsiveButton = styled.button`
     height: 3px;
     width: 24px;
     border-radius: 24px;
-    background-color: #fff;
+    background-color: ${props => props.theme.headerResponsiveButton};
     transition: transform 200ms ease-out;
 
     & + span {
