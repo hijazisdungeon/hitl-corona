@@ -218,32 +218,91 @@ export const Dropdown = styled.div`
   position: relative;
 
   button {
-    color: white;
+    color: ${props => props.theme.headerText};
     padding: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin-left: 12px;
+  }
+  button:hover {
+    display: block;
   }
   span {
     font-size: 1.8rem;
     font-weight: 600;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    &,
+    ul,
+    li,
+    a {
+      width: 100%;
+      height: auto;
+    }
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin: 0;
+
+        a {
+          padding: 20px 0px;
+        }
+      }
+    }
   }
 `;
 
 export const DropdownItems = styled.div`
   display: ${props => (props.open ? 'flex' : 'none')};
   flex-direction: column;
+
   position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  z-index: 1;
-  margin-top: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+
+  background-color: ${props => props.theme.background};
+  margin-top: -30px;
+
   top: 100%;
-  left: 0;
+  left: 22%;
+
   padding: 20px 0;
 
   a {
     padding: 20px 10px !important;
-    color: #000;
+    color: ${props => props.theme.headerMoreText};
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0;
+    align-items: center;
+
+    &,
+    ul,
+    li,
+    a {
+      width: 55%;
+      height: auto;
+    }
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin: 0;
+
+        a {
+          padding: 20px 0;
+        }
+      }
+    }
   }
 `;
