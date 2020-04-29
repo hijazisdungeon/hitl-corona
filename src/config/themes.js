@@ -14,10 +14,13 @@ const themes = {
 
     headerColor: '#fff',
     headerText: '#000',
+
     headerResponsiveButton: '#000',
     headerResponsiveBorder: '#000',
+
     backgroundHeader: 'rgba(255, 255,	255, 0.9)',
-    headerMoreText: '#fff',
+    headerMoreText: '#000',
+    headerMoreTextResponsive: '#fff',
   },
   light: {
     background: '#f0f0f5',
@@ -34,10 +37,13 @@ const themes = {
 
     headerColor: '#006daa',
     headerText: '#fff',
+
     headerResponsiveButton: '#fff',
     headerResponsiveBorder: '#fff',
+
     backgroundHeader: 'rgba(0, 0, 0, 0.3)',
-    headerMoreText: '#000',
+    headerMoreText: '#fff',
+    headerMoreTextResponsive: '#000',
   },
 };
 

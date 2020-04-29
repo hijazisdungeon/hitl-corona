@@ -66,9 +66,10 @@ export const Content = styled.div`
     height: calc(100vh - 60px);
 
     background-color: ${props => props.theme.headerColor};
+    justify-content: flex-start;
     flex-direction: column;
-    justify-content: center;
     transition: left 300ms;
+    align-items: center;
 
     left: ${props => (props.open ? '0' : '-100%')};
   }
@@ -213,8 +214,6 @@ export const ResponsiveButton = styled.button`
 
 export const Dropdown = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 
   button {
@@ -225,9 +224,17 @@ export const Dropdown = styled.div`
     cursor: pointer;
     margin-left: 5px;
   }
+
   span {
     font-size: 1.8rem;
     font-weight: 600;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 
@@ -235,20 +242,38 @@ export const DropdownItems = styled.div`
   display: ${props => (props.open ? 'flex' : 'none')};
   flex-direction: column;
 
-  position: absolute;
-  justify-content: center;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
-
   background-color: ${props => props.theme.background};
-  margin-top: -15px;
 
-  top: 100%;
-  left: 0;
+  margin-top: -15px;
 
   padding: 20px 10px;
 
-  a {
+  a,
+  button {
     padding: 20px 10px !important;
+    color: ${props => props.theme.headerMoreTextResponsive};
+    transition-duration: 0.5s;
+  }
+  a:hover,
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @media (min-width: 1025px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  @media (max-width: 1024px) {
     color: ${props => props.theme.headerMoreText};
+    margin-top: 10px;
+    background-color: transparent !important;
+
+    a,
+    button {
+      padding: 10px 0;
+      color: ${props => props.theme.headerMoreText};
+    }
   }
 `;
