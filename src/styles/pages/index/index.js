@@ -130,7 +130,7 @@ export const Button = styled(Link)`
   align-items: center;
   justify-content: center;
 
-  border-radius: 12%;
+  border-radius: 5%;
   box-shadow: 0 4px 15px 8px rgba(6, 26, 64, 0.35);
   background-color: #061a40;
   color: #fff;

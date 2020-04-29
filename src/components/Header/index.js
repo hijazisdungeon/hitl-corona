@@ -22,12 +22,10 @@ const HeaderComponent = () => {
 
   const handleNavigationButton = () => setnavbarOpened(!navbarOpen);
 
-  const handleClick = () => setDropdownOpen(!dropdownOpen);
-
   const OptionsContainer = () => {
     return (
       <Dropdown>
-        <button type="button" onClick={handleClick}>
+        <button type="button" onClick={() => setDropdownOpen(!dropdownOpen)}>
           <span>
             Mais <IoIosArrowDown size={15} />
           </span>
@@ -64,10 +62,7 @@ const HeaderComponent = () => {
               <Link href="/brazil">Brasil</Link>
             </li>
             <li>
-              <OptionsContainer
-                handleClick={handleClick}
-                dropdownOpen={dropdownOpen}
-              />
+              <OptionsContainer dropdownOpen={dropdownOpen} />
             </li>
           </ul>
         </Navigation>

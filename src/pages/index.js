@@ -41,7 +41,7 @@ const HomePage = () => (
             <p className="subject">Coronavírus no seu estado!</p>
 
             <Button href="/states">
-              <FiArrowRight size="2.5rem" />
+              <FiArrowRight size="3.5rem" />
             </Button>
           </RowItem>
 
@@ -58,7 +58,7 @@ const HomePage = () => (
             <p className="subject">Coronavírus no brazil e no mundo!</p>
 
             <Button href="/countries">
-              <FiArrowRight size="2.5rem" />
+              <FiArrowRight size="3.5rem" />
             </Button>
           </RowItem>
         </RowContainer>
