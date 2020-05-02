@@ -16,7 +16,7 @@ const FloatingButtonComponent = () => {
 
   return (
     <Container onClick={changeTheme}>
-      <Icon size={50} color="#0353a4" />
+      <Icon size="6rem" color="#4287f5" />
     </Container>
   );
 };

@@ -26,13 +26,12 @@ const HeaderComponent = () => {
     return (
       <Dropdown>
         <button type="button" onClick={() => setDropdownOpen(!dropdownOpen)}>
-          <span>
-            Mais <IoIosArrowDown size={15} />
-          </span>
+          Mais <IoIosArrowDown />
         </button>
+
         <DropdownItems open={dropdownOpen}>
-          <a href="/aboutus">Sobre Nós</a>
-          <a href="/#">Configurar</a>
+          <Link href="/aboutus">Sobre Nós</Link>
+          <Link href="/#">Configurar</Link>
         </DropdownItems>
       </Dropdown>
     );

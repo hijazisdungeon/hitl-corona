@@ -2,39 +2,74 @@ import styled from 'styled-components';
 
 import Link from '~/components/Link';
 
-export const Container = styled.section`
+export const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
-  padding: 20px;
+  padding: 20px 40px;
   text-align: center;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url('/static/images/bg_home.jpg') no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: flex;
-  min-height: 100%;
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding-top: 130px;
+  height: 100vh;
+  height: 100vh;
 
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   h1 {
-    font-size: 12rem;
+    font-size: 10rem;
     text-align: center;
 
-    span {
-      font-weight: bold;
-      color: #ed7d15;
+    @media (max-width: 478px) {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: #b9d6f2;
+      }
     }
   }
+
+  p {
+    margin-top: 10px;
+    font-size: 4rem;
+  }
+
+  & > span {
+    margin-top: 40px;
+
+    a {
+      display: flex;
+      padding: 20px;
+
+      border-radius: 50%;
+      border: 4px solid #006daa;
+      background-color: #0353a4;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+      transition: background-color 200ms;
+
+      &:hover {
+        background-color: #006daa;
+      }
+    }
+  }
+`;
+
+export const Section = styled.section`
+  display: flex;
+  height: 100vh;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const RowContainer = styled.div`
@@ -92,7 +127,8 @@ export const RowItem = styled.div`
 
     &.subject {
       position: relative;
-      top: -1.4rem;
+      margin: 15px 0;
+      top: 0;
     }
   }
 

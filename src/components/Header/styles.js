@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -61,7 +61,7 @@ export const Content = styled.div`
   justify-content: space-between;
 
   @media (max-width: 1024px) {
-    position: absolute;
+    position: fixed;
     top: 60px;
     height: calc(100vh - 60px);
 
@@ -91,7 +91,7 @@ export const Navigation = styled.nav`
       margin-left: 12px;
     }
 
-    a {
+    & > a {
       position: relative;
       padding: 0 10px;
 
@@ -142,6 +142,7 @@ export const Navigation = styled.nav`
     }
   }
 `;
+
 export const DownloadContainer = styled.div`
   margin-left: 30px;
 
@@ -217,63 +218,59 @@ export const Dropdown = styled.div`
   position: relative;
 
   button {
+    display: flex;
+    padding: 0 10px;
     color: ${props => props.theme.headerText};
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin-left: 5px;
-  }
 
-  span {
     font-size: 1.8rem;
     font-weight: 600;
+    align-items: center;
+
+    svg {
+      margin-left: 10px;
+    }
   }
 
   @media (max-width: 1024px) {
     width: 100%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
+    button {
+      padding: 20px 0;
+    }
   }
 `;
 
 export const DropdownItems = styled.div`
   display: ${props => (props.open ? 'flex' : 'none')};
-  flex-direction: column;
+  margin-top: -15px;
+  padding: 15px 0;
 
+  flex-direction: column;
+  border-radius: 4px;
   background-color: ${props => props.theme.background};
 
-  margin-top: -15px;
-
-  padding: 20px 10px;
-
-  a,
-  button {
-    padding: 20px 10px !important;
+  a {
+    padding: 15px 25px !important;
     color: ${props => props.theme.headerMoreTextResponsive};
-    transition-duration: 0.5s;
-  }
-  a:hover,
-  button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 200ms;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
   }
 
   @media (min-width: 1025px) {
     position: absolute;
     top: 100%;
-    left: 0;
+    box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 1024px) {
     color: ${props => props.theme.headerMoreText};
-    margin-top: 10px;
-    background-color: transparent !important;
-
-    a,
-    button {
-      padding: 10px 0;
-      color: ${props => props.theme.headerMoreText};
-    }
+    margin-top: 0;
+    background-color: transparent;
   }
 `;

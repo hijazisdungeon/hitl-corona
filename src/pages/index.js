@@ -1,13 +1,15 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiArrowDown } from 'react-icons/fi';
 
 import Layout from '~/layouts/Default';
 
 import Head from '~/components/Head';
+import Link from '~/components/Link';
 
 import {
   Container,
   Content,
+  Section,
   RowContainer,
   RowItem,
   Button,
@@ -27,7 +29,16 @@ const HomePage = () => (
         <h1>
           Corona<span>vírus</span>
         </h1>
+        <p>Veja como anda o coronavírus no brasil e no mundo.</p>
 
+        <span>
+          <Link href="#info">
+            <FiArrowDown size={40} color="#fff" />
+          </Link>
+        </span>
+      </Content>
+
+      <Section id="info">
         <RowContainer>
           <RowItem>
             <img src="/static/images/brazil_states.png" alt="Badge" />
@@ -62,7 +73,7 @@ const HomePage = () => (
             </Button>
           </RowItem>
         </RowContainer>
-      </Content>
+      </Section>
     </Container>
   </Layout>
 );

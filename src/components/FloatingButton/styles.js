@@ -1,15 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  display: block;
   position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 60px;
+  width: 6rem;
+  height: 6rem;
+  bottom: 40px;
   right: 40px;
-  text-align: center;
-
-  @media (max-width: 425px) {
-    padding: 0 13px;
-  }
+  padding: 10px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 `;
