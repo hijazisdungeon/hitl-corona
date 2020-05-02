@@ -105,8 +105,8 @@ export const RowItem = styled.div`
 
   border-radius: 6px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.35);
-  background-color: rgba(0, 109, 170, 0.9);
-  border: 3px solid #b9d6f2;
+  background-color: ${props => props.theme.rowBackground};
+  border: 3px solid ${props => props.theme.rowBorder};
   transition: transform 300ms;
 
   span {
@@ -156,6 +156,9 @@ export const RowItem = styled.div`
       display: none;
     }
   }
+  svg {
+    color: ${props => props.theme.rowArrowColor};
+  }
 `;
 
 export const Button = styled(Link)`
@@ -168,7 +171,7 @@ export const Button = styled(Link)`
 
   border-radius: 5%;
   box-shadow: 0 4px 15px 8px rgba(6, 26, 64, 0.35);
-  background-color: #061a40;
+  background-color: ${props => props.theme.rowButton};
   color: #fff;
   transition: box-shadow 300ms;
 

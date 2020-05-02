@@ -31,7 +31,7 @@ const HeaderComponent = () => {
 
         <DropdownItems open={dropdownOpen}>
           <Link href="/aboutus">Sobre Nós</Link>
-          <Link href="/#">Configurar</Link>
+          <Link href="/#">Fale Conosco</Link>
         </DropdownItems>
       </Dropdown>
     );

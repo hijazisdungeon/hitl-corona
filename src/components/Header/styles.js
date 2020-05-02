@@ -216,6 +216,8 @@ export const ResponsiveButton = styled.button`
 export const Dropdown = styled.div`
   display: flex;
   position: relative;
+  white-space: nowrap;
+  text-align: center;
 
   button {
     display: flex;
@@ -250,11 +252,11 @@ export const DropdownItems = styled.div`
 
   flex-direction: column;
   border-radius: 4px;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.DropdownBackground};
 
   a {
     padding: 15px 25px !important;
-    color: ${props => props.theme.headerMoreTextResponsive};
+    color: ${props => props.theme.DropdownItems};
     transition: background-color 200ms;
 
     &:hover {
@@ -269,7 +271,6 @@ export const DropdownItems = styled.div`
   }
 
   @media (max-width: 1024px) {
-    color: ${props => props.theme.headerMoreText};
     margin-top: 0;
     background-color: transparent;
   }
