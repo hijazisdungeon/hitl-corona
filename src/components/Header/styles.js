@@ -247,7 +247,6 @@ export const Dropdown = styled.div`
 
 export const DropdownItems = styled.div`
   display: ${props => (props.open ? 'flex' : 'none')};
-  margin-top: -15px;
   padding: 15px 0;
 
   flex-direction: column;
