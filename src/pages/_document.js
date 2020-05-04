@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
           />
 
           <script
-            data-ad-client="ca-pub-7405165869103100"
+            data-ad-client="ca-pub-2725246876757935"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
