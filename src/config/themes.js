@@ -1,12 +1,12 @@
 const themes = {
   dark: {
     // Background global
-    background: '#212121',
+    background: '#2c2f33',
     color: '#F9F8F8',
+    headerColorResponsive: '#fff',
 
     // Search
     backgroundInput: '#F9F8F8',
-    inputIcon: '#000',
 
     // Buttons [ states, countries]
     optionsContent: '#F9F8F8',
@@ -17,32 +17,37 @@ const themes = {
     informationTitle: '#F9F8F8',
 
     // Header
-    headerColor: '#F9F8F8',
-    headerText: '#000',
-    backgroundHeader: '#F9F8F8',
+    headerColor: '#212121',
+    headerText: '#fff',
+    backgroundHeader: '#212121',
 
-    // Download
-    headerResponsiveButton: '#000',
-    headerResponsiveBorder: '#000',
+    // Settings
+    SettingsHeader: '#fff',
 
     // Dropdown
-    DropdownBackground: '#fff',
-    DropdownItems: '#000',
+    DropdownBackground: '#212121',
+    DropdownItems: '#fff',
 
     // Home [ RowItems and RowContainer]
-    rowBackground: `#212121`,
-    rowBorder: `#fff`,
-    rowButton: `#fff`,
-    rowArrowColor: `#000`,
+    rowBackground: '#212121',
+    rowBorder: '#fff',
+    rowButton: '#fff',
+    rowArrowColor: '#000',
+
+    // Configurações [ Componente absoluto ]
+    backgroundSettings: '#212121',
+    settingsText: '#fff',
+    borderDivisor: '#fff',
+    settingsClose: '#fff',
   },
   light: {
     // Background global
     background: '#f0f0f5',
     color: '#fff',
+    headerColorResponsive: '#fff',
 
     // Search
     backgroundInput: '#2c2f33',
-    inputIcon: '#fff',
 
     // Buttons [ states, countries]
     optionsContent: 'rgba(72, 114, 199, 0.6)',
@@ -55,21 +60,26 @@ const themes = {
     // Header
     headerColor: '#006daa',
     headerText: '#fff',
-    backgroundHeader: 'rgba(0, 0, 0, 0.3)',
+    backgroundHeader: 'rgba(0, 0, 0, 0.1)',
 
-    // Download
-    headerResponsiveButton: '#fff',
-    headerResponsiveBorder: '#fff',
+    // Settings
+    SettingsHeader: '#fff',
 
     // Dropdown
-    DropdownBackground: '#212121',
-    DropdownItems: '#fff',
+    DropdownBackground: '#fff',
+    DropdownItems: '#000',
 
     // Home [ RowItems and RowContainer]
-    rowBackground: `rgba(0, 109, 170, 0.9)`,
-    rowBorder: `#b9d6f2`,
-    rowButton: `#061a40`,
-    rowArrowColor: `#fff`,
+    rowBackground: 'rgba(0, 109, 170, 0.9)',
+    rowBorder: '#b9d6f2',
+    rowButton: '#061a40',
+    rowArrowColor: '#fff',
+
+    // Configurações [ Componente absoluto ]
+    backgroundSettings: '#b9d6f2',
+    settingsText: '#0353a4',
+    borderDivisor: '#000',
+    settingsClose: '#000',
   },
 };
 

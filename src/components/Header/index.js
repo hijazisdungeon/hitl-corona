@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { FiDownload } from 'react-icons/fi';
+import { FiSettings, FiX } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setTheme } from '~/store/reducers/config/actions';
 
 import Link from '../Link';
+import Switch from '../Switch';
 
 import {
   Container,
@@ -10,32 +14,20 @@ import {
   ResponsiveContainer,
   ResponsiveButton,
   Content,
-  DownloadContainer,
+  SectionContainer,
+  Section,
   Navigation,
   Dropdown,
   DropdownItems,
 } from './styles';
 
 const HeaderComponent = () => {
+  const dispatch = useDispatch();
+  const { theme } = useSelector(state => state.config);
+
   const [navbarOpen, setnavbarOpened] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const handleNavigationButton = () => setnavbarOpened(!navbarOpen);
-
-  const OptionsContainer = () => {
-    return (
-      <Dropdown>
-        <button type="button" onClick={() => setDropdownOpen(!dropdownOpen)}>
-          Mais <IoIosArrowDown />
-        </button>
-
-        <DropdownItems open={dropdownOpen}>
-          <Link href="/aboutus">Sobre Nós</Link>
-          <Link href="/news">Últimas Noticías</Link>
-        </DropdownItems>
-      </Dropdown>
-    );
-  };
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
     <Container>
@@ -45,7 +37,10 @@ const HeaderComponent = () => {
         </Link>
 
         <ResponsiveContainer>
-          <ResponsiveButton open={navbarOpen} onClick={handleNavigationButton}>
+          <ResponsiveButton
+            open={navbarOpen}
+            onClick={() => setnavbarOpened(!navbarOpen)}
+          >
             <span /> <span /> <span />
           </ResponsiveButton>
         </ResponsiveContainer>
@@ -61,16 +56,51 @@ const HeaderComponent = () => {
               <Link href="/brazil">Brasil</Link>
             </li>
             <li>
-              <OptionsContainer dropdownOpen={dropdownOpen} />
+              <Dropdown>
+                <button
+                  type="button"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                  Mais <IoIosArrowDown />
+                </button>
+
+                <DropdownItems open={dropdownOpen}>
+                  <Link href="/construction">Download App</Link>
+                  <Link href="/aboutus">Quem somos ?</Link>
+                </DropdownItems>
+              </Dropdown>
             </li>
           </ul>
         </Navigation>
-        <DownloadContainer>
-          <Link href="/construction">
-            Download App
-            <FiDownload size={20} />
-          </Link>
-        </DownloadContainer>
+
+        <SectionContainer>
+          <button type="button" onClick={() => setSettingsOpen(!settingsOpen)}>
+            Configurações
+            <FiSettings size={20} />
+          </button>
+
+          <Section open={settingsOpen}>
+            <button
+              type="button"
+              onClick={() => setSettingsOpen(!settingsOpen)}
+            >
+              <FiX size={30} />
+            </button>
+
+            <h3>CONFIGURAÇÕES</h3>
+
+            <div className="switchs">
+              <div className="container">
+                <strong>Habilitar Modo Zen</strong>
+
+                <Switch
+                  isChecked={theme !== 'light'}
+                  onClick={() => dispatch(setTheme(theme))}
+                />
+              </div>
+            </div>
+          </Section>
+        </SectionContainer>
       </Content>
     </Container>
   );

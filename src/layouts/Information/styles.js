@@ -8,9 +8,6 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   background-color: ${props => props.theme.headerColor};
-  svg {
-    color: ${props => props.theme.inputIcon};
-  }
 
   a {
     display: flex;

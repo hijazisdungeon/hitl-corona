@@ -8,8 +8,6 @@ import { ThemeProvider } from 'styled-components';
 import themes from '~/config/themes';
 import { store, persistor } from '~/store';
 
-import FloatingButton from '~/components/FloatingButton';
-
 import GlobalStyle from '~/styles/global';
 
 const AppWrapper = ({ children }) => {
@@ -19,7 +17,6 @@ const AppWrapper = ({ children }) => {
 
   return (
     <ThemeProvider theme={colors}>
-      <FloatingButton />
       <GlobalStyle />
 
       {children}

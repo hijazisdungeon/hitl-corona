@@ -15,8 +15,6 @@ const HeadComponent = ({
     <link rel="shortcut icon" href="/icon.png" />
     <link rel="icon" href="/icon.png" />
 
-    {/* Site Verification */}
-
     {!noDefaultTags && (
       <>
         <meta property="og:locale" content="pt_BR" />
