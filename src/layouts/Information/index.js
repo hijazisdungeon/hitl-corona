@@ -22,7 +22,7 @@ const InformationLayout = ({ children, loading }) => {
         </button>
 
         <Link href="/aboutus" target="_blank">
-          <img src="/static/images/sweet_logo.png" alt="SweetCode Logo" />
+          <img src="/static/images/icon.png" alt="SweetCode Logo" />
 
           <span>
             <strong>SweetCode</strong>
