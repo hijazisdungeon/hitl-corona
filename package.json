@@ -1,11 +1,11 @@
 {
   "name": "corona-next",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "AGPL-3.0",
   "scripts": {
     "dev": "next dev",
-    "start": "cross-env NODE_ENV=production next start",
-    "build": "cross-env NODE_ENV=production next build",
+    "start": "next start",
+    "build": "next build",
     "prebuild": "cross-env rimraf __next",
     "lint": "eslint src --ext js,jsx",
     "lint:fix": "eslint src --ext js,jsx --fix",
