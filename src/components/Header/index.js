@@ -42,7 +42,7 @@ const HeaderComponent = () => {
         </ResponsiveContainer>
       </BrandsContainer>
 
-      <Content open={navbarOpen}>
+      <Content open={navbarOpen} settings_open={settingsOpen}>
         <Navigation>
           <ul>
             <li>

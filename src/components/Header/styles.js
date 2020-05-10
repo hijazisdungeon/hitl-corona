@@ -10,7 +10,6 @@ export const Container = styled.header`
 
   align-items: center;
   justify-content: space-between;
-  background-color: ${props => props.theme.backgroundHeader};
 
   a {
     font-size: 1.8rem;
@@ -27,7 +26,7 @@ export const Container = styled.header`
 `;
 
 export const BrandsContainer = styled.div`
-  z-index: 25;
+  z-index: 3;
   margin-right: 30px;
 
   img {
@@ -36,6 +35,7 @@ export const BrandsContainer = styled.div`
   }
 
   @media (max-width: 1024px) {
+    position: absolute;
     display: flex;
     width: 100%;
     height: 60px;
@@ -63,7 +63,6 @@ export const BrandsContainer = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  z-index: 22;
   width: 100%;
   height: 85px;
 
@@ -78,6 +77,7 @@ export const Content = styled.div`
     align-items: center;
     justify-content: flex-start;
 
+    z-index: ${props => (props.settings_open ? 4 : 2)};
     background-color: ${props => props.theme.headerColor};
     transition: top 300ms;
 
@@ -98,32 +98,18 @@ export const Navigation = styled.nav`
 
   li {
     & + li {
-      margin-left: 12px;
+      margin-left: 30px;
     }
 
     & > a {
       position: relative;
-      padding: 0 10px;
 
       align-items: center;
       justify-content: center;
+      transition: opacity 200ms;
 
-      &:before {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 3px;
-        top: 0;
-        background-color: #b9d6f2;
-        transition: width 400ms;
-      }
-    }
-  }
-
-  @media (min-width: 1025px) {
-    li a {
-      &:hover:before {
-        width: 100%;
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
@@ -181,6 +167,7 @@ export const SectionContainer = styled.div`
 export const Section = styled.section`
   position: fixed;
   display: ${props => (props.open ? 'flex' : 'none')};
+  z-index: 10;
   width: 50%;
   height: 70%;
   top: 50%;

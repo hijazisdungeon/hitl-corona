@@ -17,7 +17,7 @@ const CountrieInformationPage = ({ country }) => (
     />
     <List
       local={country.country}
-      flag="/static/images/world.png"
+      flag="/static/images/world/flag.png"
       lastUpdate={country.updated_at}
       info={country}
     />

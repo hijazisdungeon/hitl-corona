@@ -61,7 +61,7 @@ const CountriesPage = ({ countries: allCountries }) => {
                 >
                   <span>{country.country}</span>
 
-                  <img src="/static/images/world.png" alt="World" />
+                  <img src="/static/images/world/flag.png" alt="World" />
                 </Link>
               ))}
             </Content>
@@ -72,7 +72,7 @@ const CountriesPage = ({ countries: allCountries }) => {
                 marginTop: '30px',
               }}
             >
-              Nenhum estado encontrado!
+              Nenhum país encontrado!
             </h1>
           )}
         </Container>

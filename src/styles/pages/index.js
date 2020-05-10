@@ -39,7 +39,7 @@ export const Content = styled.section`
       font-size: 10rem;
       text-align: center;
 
-      @media (max-width: 478px) {
+      @media (max-width: 515px) {
         display: flex;
         flex-direction: column;
 
@@ -80,6 +80,7 @@ export const Section = styled.section`
   display: flex;
   padding: 120px 0;
 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #2c2f33;
@@ -89,6 +90,10 @@ export const Section = styled.section`
     z-index: 0;
     bottom: 0;
     fill: #23272a;
+  }
+
+  h1 {
+    margin-bottom: 20px;
   }
 `;
 
