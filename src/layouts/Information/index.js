@@ -25,7 +25,7 @@ const InformationLayout = ({ children, loading }) => {
           <img src="/static/images/icon.png" alt="SweetCode Logo" />
 
           <span>
-            <strong>SweetCode</strong>
+            <strong>Covid Agora</strong>
           </span>
         </Link>
       </Header>

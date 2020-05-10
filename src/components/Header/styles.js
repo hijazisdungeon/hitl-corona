@@ -87,13 +87,9 @@ export const Content = styled.div`
 
 export const Navigation = styled.nav`
   margin: 0 15px;
-  height: 100%;
 
-  ul,
-  li,
-  a {
+  ul {
     display: flex;
-    height: 100%;
   }
 
   li {
@@ -102,10 +98,6 @@ export const Navigation = styled.nav`
     }
 
     & > a {
-      position: relative;
-
-      align-items: center;
-      justify-content: center;
       transition: opacity 200ms;
 
       &:hover {
@@ -115,15 +107,9 @@ export const Navigation = styled.nav`
   }
 
   @media (max-width: 1024px) {
+    width: 100%;
     margin: 0;
-
-    &,
-    ul,
-    li,
-    a {
-      width: 100%;
-      height: auto;
-    }
+    text-align: center;
 
     ul {
       flex-direction: column;
@@ -132,6 +118,8 @@ export const Navigation = styled.nav`
         margin: 0;
 
         a {
+          display: block;
+          width: 100%;
           padding: 20px 0;
         }
       }

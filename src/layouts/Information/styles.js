@@ -19,7 +19,7 @@ export const Header = styled.header`
     }
 
     span {
-      margin-left: 5px;
+      margin-left: 10px;
       color: ${props => props.theme.headerText};
     }
 
