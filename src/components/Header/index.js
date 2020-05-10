@@ -29,7 +29,7 @@ const HeaderComponent = () => {
     <Container>
       <BrandsContainer open={navbarOpen}>
         <Link href="/">
-          <img src="/static/images/sweet_logo.png" alt="SweetCode Logo" />
+          <img src="/static/images/icon.png" alt="SweetCode Logo" />
         </Link>
 
         <ResponsiveContainer>
