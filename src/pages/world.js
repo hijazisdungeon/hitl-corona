@@ -14,13 +14,13 @@ const WorldPage = ({ info }) => (
     <Head
       title="Covid Agora - Mundo"
       description="Acompanhe como anda a real situação do coronavírus no mundo."
-      image="/static/images/world.png"
+      image="/static/images/world/flag.png"
     />
 
     <Layout loading={!info}>
       <List
         local="World"
-        flag="/static/images/world.png"
+        flag="/static/images/world/flag.png"
         lastUpdate={info && info.updated_at}
         info={info}
       />

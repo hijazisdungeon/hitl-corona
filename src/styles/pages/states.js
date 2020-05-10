@@ -23,6 +23,7 @@ export const SearchContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
+
   svg {
     color: ${props => props.theme.inputIcon};
   }

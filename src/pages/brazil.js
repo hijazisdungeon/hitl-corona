@@ -19,7 +19,7 @@ const BrazilPage = ({ info }) => (
     <Layout loading={!info}>
       <List
         local="Brazil"
-        flag="/static/images/br_flag.jpg"
+        flag="/static/images/brazil/flag.jpg"
         lastUpdate={info && info.updated_at}
         info={info}
       />

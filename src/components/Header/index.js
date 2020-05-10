@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FiSettings, FiX } from 'react-icons/fi';
-import { IoIosArrowDown } from 'react-icons/io';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setTheme } from '~/store/reducers/config/actions';
@@ -17,8 +16,6 @@ import {
   SectionContainer,
   Section,
   Navigation,
-  Dropdown,
-  DropdownItems,
 } from './styles';
 
 const HeaderComponent = () => {
@@ -26,12 +23,11 @@ const HeaderComponent = () => {
   const { theme } = useSelector(state => state.config);
 
   const [navbarOpen, setnavbarOpened] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
     <Container>
-      <BrandsContainer>
+      <BrandsContainer open={navbarOpen}>
         <Link href="/">
           <img src="/static/images/sweet_logo.png" alt="SweetCode Logo" />
         </Link>
@@ -56,19 +52,7 @@ const HeaderComponent = () => {
               <Link href="/brazil">Brasil</Link>
             </li>
             <li>
-              <Dropdown>
-                <button
-                  type="button"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
-                  Mais <IoIosArrowDown />
-                </button>
-
-                <DropdownItems open={dropdownOpen}>
-                  <Link href="/construction">Download App</Link>
-                  <Link href="/aboutus">Quem somos ?</Link>
-                </DropdownItems>
-              </Dropdown>
+              <Link href="/news">Notícias</Link>
             </li>
           </ul>
         </Navigation>

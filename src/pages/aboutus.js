@@ -46,7 +46,7 @@ const AboutUsPage = () => {
       <Head
         title="Covid Agora - Sobre Nós"
         description="Equipe responsavel pelo desenvolvimento da plataforma"
-        image="/static/images/bg_team.jpg"
+        image="/static/images/aboutus/team.jpg"
       >
         <meta property="og:image:alt" content="Thumbnail" />
         <meta property="og:image:width" content="1280" />

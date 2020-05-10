@@ -11,7 +11,7 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('/static/images/bg_aboutus.jpg') no-repeat;
+    url('/static/images/aboutus/background.jpg') no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;

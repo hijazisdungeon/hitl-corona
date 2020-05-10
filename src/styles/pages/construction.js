@@ -9,7 +9,7 @@ export const Container = styled.section`
   text-align: center;
 
   background: linear-gradient(rgba(3, 83, 164, 0.3), rgba(0, 0, 0, 0.3)),
-    url('/static/images/bg_in_building.jpg') no-repeat;
+    url('/static/images/construction/background.jpg') no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   background-attachment: fixed;

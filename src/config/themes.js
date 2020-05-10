@@ -7,6 +7,7 @@ const themes = {
 
     // Search
     backgroundInput: '#F9F8F8',
+    inputIcon: '#000',
 
     // Buttons [ states, countries]
     optionsContent: '#F9F8F8',
@@ -19,7 +20,7 @@ const themes = {
     // Header
     headerColor: '#212121',
     headerText: '#fff',
-    backgroundHeader: '#212121',
+    backgroundHeader: 'rgba(0, 0, 0, 0.5)',
 
     // Settings
     SettingsHeader: '#fff',
@@ -48,6 +49,7 @@ const themes = {
 
     // Search
     backgroundInput: '#2c2f33',
+    inputIcon: '#fff',
 
     // Buttons [ states, countries]
     optionsContent: 'rgba(72, 114, 199, 0.6)',
@@ -60,7 +62,7 @@ const themes = {
     // Header
     headerColor: '#006daa',
     headerText: '#fff',
-    backgroundHeader: 'rgba(0, 0, 0, 0.1)',
+    backgroundHeader: 'rgba(0, 0, 0, 0.5)',
 
     // Settings
     SettingsHeader: '#fff',
@@ -76,8 +78,8 @@ const themes = {
     rowArrowColor: '#fff',
 
     // Configurações [ Componente absoluto ]
-    backgroundSettings: '#b9d6f2',
-    settingsText: '#0353a4',
+    backgroundSettings: '#f5f5f5',
+    settingsText: '#000',
     borderDivisor: '#000',
     settingsClose: '#000',
   },

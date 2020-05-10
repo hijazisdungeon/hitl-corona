@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import Spinner from '~/components/Spinner';
 
@@ -11,6 +12,8 @@ const DefaulLayout = ({ children, loading }) => (
     {!loading && <Header />}
 
     <Main>{loading ? <Spinner /> : children}</Main>
+
+    <Footer />
   </>
 );
 

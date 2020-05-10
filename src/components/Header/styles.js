@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
-  position: fixed;
+  position: absolute;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -27,6 +27,7 @@ export const Container = styled.header`
 `;
 
 export const BrandsContainer = styled.div`
+  z-index: 25;
   margin-right: 30px;
 
   img {
@@ -43,7 +44,15 @@ export const BrandsContainer = styled.div`
 
     align-items: center;
     justify-content: space-between;
-    background-color: ${props => props.theme.headerColor};
+    transition: background-color 200ms;
+    background-color: transparent;
+
+    ${props =>
+      props.open &&
+      css`
+        position: fixed;
+        background-color: ${props.theme.headerColor};
+      `}
 
     img {
       width: 30px;
@@ -54,6 +63,7 @@ export const BrandsContainer = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  z-index: 22;
   width: 100%;
   height: 85px;
 
@@ -62,7 +72,6 @@ export const Content = styled.div`
 
   @media (max-width: 1024px) {
     position: fixed;
-    top: 60px;
     height: calc(100vh - 60px);
 
     flex-direction: column;
@@ -70,9 +79,9 @@ export const Content = styled.div`
     justify-content: flex-start;
 
     background-color: ${props => props.theme.headerColor};
-    transition: left 300ms;
+    transition: top 300ms;
 
-    left: ${props => (props.open ? '0' : '-100%')};
+    top: ${props => (props.open ? '60px' : '-100%')};
   }
 `;
 
@@ -184,6 +193,7 @@ export const Section = styled.section`
   transform: translate(-50%, -50%);
   box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.3);
   transition: opacity width height 200ms;
+  border-radius: 2%;
 
   background-color: ${props => props.theme.backgroundSettings};
   color: ${props => props.theme.settingsText};
@@ -275,74 +285,5 @@ export const ResponsiveButton = styled.button`
           transform: rotate(-45deg);
         }
       `}
-  }
-`;
-
-export const Dropdown = styled.div`
-  display: flex;
-  position: relative;
-  white-space: nowrap;
-  text-align: center;
-
-  button {
-    display: flex;
-    padding: 0 10px;
-    color: ${props => props.theme.headerText};
-
-    font-size: 1.8rem;
-    font-weight: 600;
-    align-items: center;
-
-    svg {
-      margin-left: 10px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    button {
-      padding: 20px 0;
-    }
-  }
-`;
-
-export const DropdownItems = styled.div`
-  display: ${props => (props.open ? 'flex' : 'none')};
-  padding: 15px 0;
-
-  flex-direction: column;
-  border-radius: 4px;
-  background-color: ${props => props.theme.DropdownBackground};
-
-  a {
-    padding: 15px 25px !important;
-    color: ${props => props.theme.DropdownItems};
-    transition: background-color 200ms;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-  }
-
-  @media (min-width: 1025px) {
-    position: absolute;
-    top: 100%;
-    box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    margin-top: 0;
-    background-color: transparent;
-
-    a {
-      display: flex;
-      justify-content: center;
-      color: #fff;
-    }
   }
 `;
