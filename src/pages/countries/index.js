@@ -31,53 +31,54 @@ const CountriesPage = ({ countries: allCountries }) => {
   );
 
   return (
-    <>
-      <Head
-        title="Covid Agora | Países"
-        description="Fique por dentro das estatisticas de cada país."
-      />
+    <Layout
+      loading={!countries}
+      head={
+        <Head
+          title="Covid Agora | Países"
+          description="Fique por dentro das estatisticas de cada país."
+        />
+      }
+    >
+      <Container>
+        <SearchContainer>
+          <Input
+            type="text"
+            placeholder="Pesquise o país..."
+            onChange={handleInput}
+          />
 
-      <Layout loading={!countries}>
-        <Container>
-          <SearchContainer>
-            <Input
-              type="text"
-              placeholder="Pesquise o país..."
-              onChange={handleInput}
-            />
+          <span>
+            <AiOutlineSearch size="2.5rem" />
+          </span>
+        </SearchContainer>
 
-            <span>
-              <AiOutlineSearch size="2.5rem" />
-            </span>
-          </SearchContainer>
+        {countries && countries.length ? (
+          <Content>
+            {countries.map(country => (
+              <Link
+                key={country.country}
+                href="/countries/[country]"
+                as={`/countries/${country.country}`}
+              >
+                <span>{country.country}</span>
 
-          {countries && countries.length ? (
-            <Content>
-              {countries.map(country => (
-                <Link
-                  key={country.country}
-                  href="/countries/[country]"
-                  as={`/countries/${country.country}`}
-                >
-                  <span>{country.country}</span>
-
-                  <img src="/static/images/world/flag.png" alt="World" />
-                </Link>
-              ))}
-            </Content>
-          ) : (
-            <h1
-              style={{
-                color: '#000',
-                marginTop: '30px',
-              }}
-            >
-              Nenhum país encontrado!
-            </h1>
-          )}
-        </Container>
-      </Layout>
-    </>
+                <img src="/static/images/world/flag.png" alt="World" />
+              </Link>
+            ))}
+          </Content>
+        ) : (
+          <h1
+            style={{
+              color: '#000',
+              marginTop: '30px',
+            }}
+          >
+            Nenhum país encontrado!
+          </h1>
+        )}
+      </Container>
+    </Layout>
   );
 };
 

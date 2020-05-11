@@ -31,51 +31,52 @@ const StatesPage = ({ states: allStates }) => {
   );
 
   return (
-    <>
-      <Head
-        title="Covid Agora | Estados"
-        description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
-      />
+    <Layout
+      loading={!states}
+      head={
+        <Head
+          title="Covid Agora | Estados"
+          description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
+        />
+      }
+    >
+      <Container>
+        <SearchContainer>
+          <Input
+            type="text"
+            placeholder="Pesquise o estado..."
+            onChange={handleInput}
+          />
 
-      <Layout loading={!states}>
-        <Container>
-          <SearchContainer>
-            <Input
-              type="text"
-              placeholder="Pesquise o estado..."
-              onChange={handleInput}
-            />
+          <span>
+            <AiOutlineSearch size="2.5rem" />
+          </span>
+        </SearchContainer>
 
-            <span>
-              <AiOutlineSearch size="2.5rem" />
-            </span>
-          </SearchContainer>
+        {states && states.length ? (
+          <Content>
+            {states.map(state => (
+              <Link
+                key={state.state}
+                href="/states/[uf]"
+                as={`/states/${state.uf}`}
+              >
+                <span>{state.state}</span>
 
-          {states && states.length ? (
-            <Content>
-              {states.map(state => (
-                <Link
-                  key={state.state}
-                  href="/states/[uf]"
-                  as={`/states/${state.uf}`}
-                >
-                  <span>{state.state}</span>
-
-                  <img
-                    src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-                    alt="State Flag"
-                  />
-                </Link>
-              ))}
-            </Content>
-          ) : (
-            <h1 style={{ color: '#000', marginTop: '30px' }}>
-              Nenhum estado encontrado!
-            </h1>
-          )}
-        </Container>
-      </Layout>
-    </>
+                <img
+                  src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+                  alt="State Flag"
+                />
+              </Link>
+            ))}
+          </Content>
+        ) : (
+          <h1 style={{ color: '#000', marginTop: '30px' }}>
+            Nenhum estado encontrado!
+          </h1>
+        )}
+      </Container>
+    </Layout>
   );
 };
 

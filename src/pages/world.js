@@ -10,22 +10,20 @@ import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const WorldPage = ({ info }) => (
-  <>
+  <Layout loading={!info}>
     <Head
       title="Covid Agora | Mundo"
       description="Acompanhe como anda a real situação do coronavírus no mundo."
       image="static/images/world/flag.png"
     />
 
-    <Layout loading={!info}>
-      <List
-        local="World"
-        flag="/static/images/world/flag.png"
-        lastUpdate={info && info.updated_at}
-        info={info}
-      />
-    </Layout>
-  </>
+    <List
+      local="World"
+      flag="/static/images/world/flag.png"
+      lastUpdate={info && info.updated_at}
+      info={info}
+    />
+  </Layout>
 );
 
 WorldPage.getInitialProps = async () => {
