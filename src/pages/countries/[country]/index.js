@@ -10,21 +10,21 @@ import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const CountrieInformationPage = ({ country }) => (
-  <Layout
-    head={
-      <Head
-        title={`Covid Agora - ${country.country}`}
-        description="Veja como anda o coronavírus no páis onde algum de seus familiares mora ou está."
-      />
-    }
-  >
-    <List
-      local={country.country}
-      flag="/static/images/world/flag.png"
-      lastUpdate={country.updated_at}
-      info={country}
+  <>
+    <Head
+      title={`Covid Agora - ${country.country}`}
+      description="Veja como anda o coronavírus no páis onde algum de seus familiares mora ou está."
     />
-  </Layout>
+
+    <Layout>
+      <List
+        local={country.country}
+        flag="/static/images/world/flag.png"
+        lastUpdate={country.updated_at}
+        info={country}
+      />
+    </Layout>
+  </>
 );
 
 CountrieInformationPage.getInitialProps = async ({

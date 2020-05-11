@@ -13,6 +13,6 @@ export default function configReducer(state = INITIAL_STATE, action) {
     }
 
     default:
-      return INITIAL_STATE;
+      return state;
   }
 }

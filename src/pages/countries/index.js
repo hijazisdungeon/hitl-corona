@@ -31,54 +31,53 @@ const CountriesPage = ({ countries: allCountries }) => {
   );
 
   return (
-    <Layout
-      loading={!countries}
-      head={
-        <Head
-          title="Covid Agora | Países"
-          description="Fique por dentro das estatisticas de cada país."
-        />
-      }
-    >
-      <Container>
-        <SearchContainer>
-          <Input
-            type="text"
-            placeholder="Pesquise o país..."
-            onChange={handleInput}
-          />
+    <>
+      <Head
+        title="Covid Agora | Países"
+        description="Fique por dentro das estatisticas de cada país."
+      />
 
-          <span>
-            <AiOutlineSearch size="2.5rem" />
-          </span>
-        </SearchContainer>
+      <Layout loading={!countries}>
+        <Container>
+          <SearchContainer>
+            <Input
+              type="text"
+              placeholder="Pesquise o país..."
+              onChange={handleInput}
+            />
 
-        {countries && countries.length ? (
-          <Content>
-            {countries.map(country => (
-              <Link
-                key={country.country}
-                href="/countries/[country]"
-                as={`/countries/${country.country}`}
-              >
-                <span>{country.country}</span>
+            <span>
+              <AiOutlineSearch size="2.5rem" />
+            </span>
+          </SearchContainer>
 
-                <img src="/static/images/world/flag.png" alt="World" />
-              </Link>
-            ))}
-          </Content>
-        ) : (
-          <h1
-            style={{
-              color: '#000',
-              marginTop: '30px',
-            }}
-          >
-            Nenhum país encontrado!
-          </h1>
-        )}
-      </Container>
-    </Layout>
+          {countries && countries.length ? (
+            <Content>
+              {countries.map(country => (
+                <Link
+                  key={country.country}
+                  href="/countries/[country]"
+                  as={`/countries/${country.country}`}
+                >
+                  <span>{country.country}</span>
+
+                  <img src="/static/images/world/flag.png" alt="World" />
+                </Link>
+              ))}
+            </Content>
+          ) : (
+            <h1
+              style={{
+                color: '#000',
+                marginTop: '30px',
+              }}
+            >
+              Nenhum país encontrado!
+            </h1>
+          )}
+        </Container>
+      </Layout>
+    </>
   );
 };
 

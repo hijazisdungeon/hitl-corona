@@ -10,21 +10,21 @@ import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const StateInformationPage = ({ state }) => (
-  <Layout
-    head={
-      <Head
-        title={`Covid Agora - ${state.state}`}
-        description="Veja como anda o coronavírus em seu estado, e avise a seus familiares."
-      />
-    }
-  >
-    <List
-      local={`${state.state} - ${state.uf}`}
-      flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-      lastUpdate={state.datetime}
-      info={state}
+  <>
+    <Head
+      title={`Covid Agora - ${state.state}`}
+      description="Veja como anda o coronavírus em seu estado, e avise a seus familiares."
     />
-  </Layout>
+
+    <Layout>
+      <List
+        local={`${state.state} - ${state.uf}`}
+        flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+        lastUpdate={state.datetime}
+        info={state}
+      />
+    </Layout>
+  </>
 );
 
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {

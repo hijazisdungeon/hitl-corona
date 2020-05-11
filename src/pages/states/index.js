@@ -31,52 +31,51 @@ const StatesPage = ({ states: allStates }) => {
   );
 
   return (
-    <Layout
-      loading={!states}
-      head={
-        <Head
-          title="Covid Agora | Estados"
-          description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
-        />
-      }
-    >
-      <Container>
-        <SearchContainer>
-          <Input
-            type="text"
-            placeholder="Pesquise o estado..."
-            onChange={handleInput}
-          />
+    <>
+      <Head
+        title="Covid Agora | Estados"
+        description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
+      />
 
-          <span>
-            <AiOutlineSearch size="2.5rem" />
-          </span>
-        </SearchContainer>
+      <Layout loading={!states}>
+        <Container>
+          <SearchContainer>
+            <Input
+              type="text"
+              placeholder="Pesquise o estado..."
+              onChange={handleInput}
+            />
 
-        {states && states.length ? (
-          <Content>
-            {states.map(state => (
-              <Link
-                key={state.state}
-                href="/states/[uf]"
-                as={`/states/${state.uf}`}
-              >
-                <span>{state.state}</span>
+            <span>
+              <AiOutlineSearch size="2.5rem" />
+            </span>
+          </SearchContainer>
 
-                <img
-                  src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-                  alt="State Flag"
-                />
-              </Link>
-            ))}
-          </Content>
-        ) : (
-          <h1 style={{ color: '#000', marginTop: '30px' }}>
-            Nenhum estado encontrado!
-          </h1>
-        )}
-      </Container>
-    </Layout>
+          {states && states.length ? (
+            <Content>
+              {states.map(state => (
+                <Link
+                  key={state.state}
+                  href="/states/[uf]"
+                  as={`/states/${state.uf}`}
+                >
+                  <span>{state.state}</span>
+
+                  <img
+                    src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
+                    alt="State Flag"
+                  />
+                </Link>
+              ))}
+            </Content>
+          ) : (
+            <h1 style={{ color: '#000', marginTop: '30px' }}>
+              Nenhum estado encontrado!
+            </h1>
+          )}
+        </Container>
+      </Layout>
+    </>
   );
 };
 

@@ -42,52 +42,51 @@ const AboutUsPage = () => {
   }, []);
 
   return (
-    <Layout
-      loading={!members.length}
-      head={
-        <Head
-          title="Covid Agora | Sobre Nós"
-          description="Veja a equipe responsavel pelo desenvolvimento da plataforma."
-          image="static/images/aboutus/team.jpg"
-        >
-          <meta name="og:image:width" content="1200" />
-          <meta name="og:image:height" content="620" />
-          <meta name="twitter:image:width" content="1200" />
-          <meta name="twitter:image:height" content="620" />
-        </Head>
-      }
-    >
-      <Container>
-        <Header>
-          <p>
-            Site pensado e desenvolvido pela equipe <b>SweetCode</b>.
-          </p>
-        </Header>
+    <>
+      <Head
+        title="Covid Agora | Sobre Nós"
+        description="Veja a equipe responsavel pelo desenvolvimento da plataforma."
+        image="static/images/aboutus/team.jpg"
+      >
+        <meta name="og:image:width" content="1200" />
+        <meta name="og:image:height" content="620" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="620" />
+      </Head>
 
-        <MembersContainer>
-          {members.map(member => (
-            <Row key={member.id}>
-              <img src={member.avatar_url} alt="Member Logo" />
+      <Layout loading={!members.length}>
+        <Container>
+          <Header>
+            <p>
+              Site pensado e desenvolvido pela equipe <b>SweetCode</b>.
+            </p>
+          </Header>
 
-              <Brands>
-                <span>
-                  {member.username}
-                  <span>{member.discriminator}</span>
-                </span>
+          <MembersContainer>
+            {members.map(member => (
+              <Row key={member.id}>
+                <img src={member.avatar_url} alt="Member Logo" />
 
-                <a
-                  href={member.html_url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FaGithub size="2.8rem" color="#fff" />
-                </a>
-              </Brands>
-            </Row>
-          ))}
-        </MembersContainer>
-      </Container>
-    </Layout>
+                <Brands>
+                  <span>
+                    {member.username}
+                    <span>{member.discriminator}</span>
+                  </span>
+
+                  <a
+                    href={member.html_url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FaGithub size="2.8rem" color="#fff" />
+                  </a>
+                </Brands>
+              </Row>
+            ))}
+          </MembersContainer>
+        </Container>
+      </Layout>
+    </>
   );
 };
 

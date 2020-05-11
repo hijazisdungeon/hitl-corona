@@ -23,12 +23,14 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="MobileOptimized" content="320" />
 
           <meta name="theme-color" content="#006daa" />
           <meta name="author" content="SweetCode Team" />
 
-          <meta name="HandheldFriendly" content="True" />
-          <meta name="MobileOptimized" content="320" />
+          <meta name="og:locale" content="pt_BR" />
+          <meta name="og:type" content="website" />
+          <meta name="og:site_name" content="Covid Agora" />
 
           <link rel="icon" href="/favicon.png" />
 
