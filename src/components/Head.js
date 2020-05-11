@@ -31,15 +31,19 @@ const HeadComponent = ({
       <meta itemProp="name" content={title} />
       <meta itemProp="description" content={description} />
 
-      <meta name="og:title" content={title} />
-      <meta name="og:description" content={description} />
-      <meta name="og:image" content={imageParsed} />
-      <meta name="og:image:secure_url" content={imageParsed} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={imageParsed} />
+      <meta property="og:image:secure_url" content={imageParsed} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageParsed} />
-      <meta name="twitter:image:src" content={imageParsed} />
+      <meta
+        name="twitter:image:src"
+        content="https://covidagora.site/icon.png"
+      />
 
       <meta name="description" content={description} />
       <meta name="image" content={imageParsed} />

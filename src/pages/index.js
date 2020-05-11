@@ -18,10 +18,7 @@ import {
 
 const HomePage = () => (
   <>
-    <Head
-      title="Covid Agora | Coronavírus em tempo real"
-      image="static/icon.png"
-    >
+    <Head title="Covid Agora | Coronavírus em tempo real" image="icon.png">
       <meta name="robots" content="noodp" />
     </Head>
 

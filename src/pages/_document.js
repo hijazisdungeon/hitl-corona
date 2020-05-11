@@ -28,9 +28,9 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#006daa" />
           <meta name="author" content="SweetCode Team" />
 
-          <meta name="og:locale" content="pt_BR" />
-          <meta name="og:type" content="website" />
-          <meta name="og:site_name" content="Covid Agora" />
+          <meta property="og:locale" content="pt_BR" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Covid Agora" />
 
           <link rel="icon" href="/favicon.png" />
 
