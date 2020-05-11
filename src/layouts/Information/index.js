@@ -8,7 +8,7 @@ import Spinner from '~/components/Spinner';
 
 import { Header, Content } from './styles';
 
-const InformationLayout = ({ children, head, loading }) => {
+const InformationLayout = ({ children, loading }) => {
   const router = useRouter();
 
   const paths = router.pathname.split(/\//).filter(p => !!p);
@@ -16,8 +16,6 @@ const InformationLayout = ({ children, head, loading }) => {
 
   return (
     <>
-      {head}
-
       <Header>
         <button type="button" onClick={() => router.push(`/${redirectPath}`)}>
           <FiArrowLeft size="4rem" color="#fff" />
@@ -39,12 +37,10 @@ const InformationLayout = ({ children, head, loading }) => {
 
 InformationLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  head: PropTypes.element,
   loading: PropTypes.bool,
 };
 
 InformationLayout.defaultProps = {
-  head: null,
   loading: false,
 };
 

@@ -7,9 +7,8 @@ import Spinner from '~/components/Spinner';
 
 import { Main } from './styles';
 
-const DefaulLayout = ({ children, head, loading }) => (
+const DefaulLayout = ({ children, loading }) => (
   <>
-    {head}
     {!loading && <Header />}
 
     <Main>{loading ? <Spinner /> : children}</Main>
@@ -20,12 +19,10 @@ const DefaulLayout = ({ children, head, loading }) => (
 
 DefaulLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  head: PropTypes.element,
   loading: PropTypes.bool,
 };
 
 DefaulLayout.defaultProps = {
-  head: null,
   loading: false,
 };
 
