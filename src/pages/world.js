@@ -12,9 +12,9 @@ import { objectLocaleString } from '~/utils';
 const WorldPage = ({ info }) => (
   <>
     <Head
-      title="Covid Agora - Mundo"
+      title="Covid Agora | Mundo"
       description="Acompanhe como anda a real situação do coronavírus no mundo."
-      image="/static/images/world/flag.png"
+      image="static/images/world/flag.png"
     />
 
     <Layout loading={!info}>

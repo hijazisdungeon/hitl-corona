@@ -11,17 +11,13 @@
   </url>
   <url>
     <loc>https://covidagora.site/states</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://covidagora.site/brazil</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://covidagora.site/download</loc>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
+    <loc>https://covidagora.site/countries</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://covidagora.site/aboutus</loc>
     <priority>0.6</priority>
   </url>

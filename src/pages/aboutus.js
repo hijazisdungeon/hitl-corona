@@ -44,13 +44,14 @@ const AboutUsPage = () => {
   return (
     <>
       <Head
-        title="Covid Agora - Sobre Nós"
-        description="Equipe responsavel pelo desenvolvimento da plataforma"
-        image="/static/images/aboutus/team.jpg"
+        title="Covid Agora | Sobre Nós"
+        description="Veja a equipe responsavel pelo desenvolvimento da plataforma."
+        image="static/images/aboutus/team.jpg"
       >
-        <meta property="og:image:alt" content="Thumbnail" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="720" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="620" />
+        <meta property="twitter:image:width" content="1200" />
+        <meta property="twitter:image:height" content="620" />
       </Head>
 
       <Layout loading={!members.length}>

@@ -33,7 +33,7 @@ const CountriesPage = ({ countries: allCountries }) => {
   return (
     <>
       <Head
-        title="Covid Agora - Países"
+        title="Covid Agora | Países"
         description="Fique por dentro das estatisticas de cada país."
       />
 

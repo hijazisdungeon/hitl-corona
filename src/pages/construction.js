@@ -7,24 +7,26 @@ import Head from '~/components/Head';
 
 import { Container, Content, BackButton } from '~/styles/pages/construction';
 
-const InBuildingPage = () => (
-  <Layout>
-    <Head title="Covid Agora - Construction" noDefaultTags />
+const ConstructionPage = () => (
+  <>
+    <Head title="Covid Agora | Em Construção" noDefaultTags />
 
-    <Container>
-      <Content>
-        <h1>EM BREVE !</h1>
-        <h2>
-          Aplicativo em desenvolvimento pela equipe{' '}
-          <span style={{ color: '#000' }}>SweetCode</span>.
-        </h2>
+    <Layout>
+      <Container>
+        <Content>
+          <h1>EM BREVE !</h1>
+          <h2>
+            Aplicativo em desenvolvimento pela equipe{' '}
+            <span style={{ color: '#000' }}>SweetCode</span>.
+          </h2>
 
-        <BackButton href="/">
-          <FiArrowLeft size="2.5rem" /> Voltar para o Início
-        </BackButton>
-      </Content>
-    </Container>
-  </Layout>
+          <BackButton href="/">
+            <FiArrowLeft size="2.5rem" /> Voltar para o Início
+          </BackButton>
+        </Content>
+      </Container>
+    </Layout>
+  </>
 );
 
-export default InBuildingPage;
+export default ConstructionPage;

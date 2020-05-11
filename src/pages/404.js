@@ -8,20 +8,22 @@ import Head from '~/components/Head';
 import { Container, Content, BackButton } from '~/styles/pages/404';
 
 const NotFoundPage = () => (
-  <Layout>
-    <Head title="Covid Agora - 404" noDefaultTags />
+  <>
+    <Head title="Covid Agora | Nada Encontrado" noDefaultTags />
 
-    <Container>
-      <Content>
-        <h1>404</h1>
-        <h3>Página não Encontrada</h3>
+    <Layout>
+      <Container>
+        <Content>
+          <h1>404</h1>
+          <h3>Página não Encontrada</h3>
 
-        <BackButton href="/">
-          <FiArrowLeft size="2.5rem" /> Voltar para o Início
-        </BackButton>
-      </Content>
-    </Container>
-  </Layout>
+          <BackButton href="/">
+            <FiArrowLeft size="2.5rem" /> Voltar para o Início
+          </BackButton>
+        </Content>
+      </Container>
+    </Layout>
+  </>
 );
 
 export default NotFoundPage;

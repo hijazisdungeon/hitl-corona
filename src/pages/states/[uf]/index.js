@@ -9,28 +9,34 @@ import List from '~/components/List';
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
-const StateInformationPage = ({ state }) => (
-  <Layout>
-    <Head
-      title={`Covid Agora - ${state.state}`}
-      description="Veja como anda o coronavírus em seu estado, e avise a seus familiares."
-      image={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-    />
+const StateInformationPage = ({ state }) => {
+  const flagImage = `https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`;
 
-    <List
-      local={`${state.state} - ${state.uf}`}
-      flag={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${state.uf}.png`}
-      lastUpdate={state.datetime}
-      info={state}
-    />
-  </Layout>
-);
+  return (
+    <>
+      <Head
+        title={`Covid Agora - ${state.state}`}
+        description="Veja como anda o coronavírus em seu estado, e avise a seus familiares."
+        image={flagImage}
+        icon={flagImage}
+      />
 
-// eslint-disable-next-line consistent-return
+      <Layout>
+        <List
+          local={`${state.state} - ${state.uf}`}
+          flag={flagImage}
+          lastUpdate={state.datetime}
+          info={state}
+        />
+      </Layout>
+    </>
+  );
+};
+
 StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   const back = () => {
-    res.writeHead(301, { Location: '/404' });
-    return res.end();
+    res.writeHead(302, { Location: '/states' });
+    res.end();
   };
 
   try {

@@ -11,6 +11,7 @@ const NewsPage = () => (
       title="Últimas Noticias COVID-19"
       description="Não caia em fake News fique atualizado sobre as noticias do covid"
     />
+
     <Layout>
       <News />
     </Layout>

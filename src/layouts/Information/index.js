@@ -22,7 +22,7 @@ const InformationLayout = ({ children, loading }) => {
         </button>
 
         <Link href="/aboutus" target="_blank">
-          <img src="/static/images/icon.png" alt="SweetCode Logo" />
+          <img src="/icon.png" alt="Covid Agora Logo" />
 
           <span>
             <strong>Covid Agora</strong>

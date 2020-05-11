@@ -29,7 +29,7 @@ const HeaderComponent = () => {
     <Container>
       <BrandsContainer open={navbarOpen}>
         <Link href="/">
-          <img src="/static/images/icon.png" alt="SweetCode Logo" />
+          <img src="/icon.png" alt="Covid Agora Logo" />
         </Link>
 
         <ResponsiveContainer>
@@ -49,7 +49,9 @@ const HeaderComponent = () => {
               <Link href="/world">Mundo</Link>
             </li>
             <li>
-              <Link href="/brazil">Brasil</Link>
+              <Link href="/countries/[country]" as="/countries/brazil">
+                Brasil
+              </Link>
             </li>
             <li>
               <Link href="/news">Notícias</Link>

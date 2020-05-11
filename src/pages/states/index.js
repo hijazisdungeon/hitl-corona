@@ -33,7 +33,7 @@ const StatesPage = ({ states: allStates }) => {
   return (
     <>
       <Head
-        title="Covid Agora - Estados"
+        title="Covid Agora | Estados"
         description="Verifique as estatísticas do estado onde você mora, e fique por dentro da situação na palma da sua mão."
       />
 
