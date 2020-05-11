@@ -12,10 +12,9 @@ const FooterComponent = () => (
           <h3>Oque Procura ?</h3>
 
           <Link href="/world">Mundo</Link>
-          <Link href="/brazil">Brazil</Link>
+          <Link href="/countries">Países</Link>
           <Link href="/states">Estados</Link>
-          <Link href="/news">Notícias</Link>
-          <Link href="/construction">Download APP</Link>
+          <Link href="/#">Notícias</Link>
         </NavigationItem>
 
         <NavigationItem>
@@ -34,6 +33,7 @@ const FooterComponent = () => (
         <NavigationItem>
           <h3>Recursos</h3>
 
+          <Link href="/construction">Download APP</Link>
           <a
             href=" https://discord.gg/fruaT8R"
             target="_blank"
@@ -53,9 +53,9 @@ const FooterComponent = () => (
         <NavigationItem>
           <h3>Site</h3>
 
-          <Link href="/404">Termos</Link>
-          <Link href="/404">Privacidade</Link>
-          <Link href="/404">Cookies</Link>
+          <Link href="/#">Termos</Link>
+          <Link href="/#">Privacidade</Link>
+          <Link href="/#">Cookies</Link>
         </NavigationItem>
       </Navigation>
 

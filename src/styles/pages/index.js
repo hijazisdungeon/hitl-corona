@@ -5,7 +5,6 @@ import Link from '~/components/Link';
 export const Container = styled.div`
   position: relative;
   width: 100%;
-
   text-align: center;
 `;
 

@@ -21,12 +21,7 @@ const HomePage = () => (
     <Head
       title="Covid Agora | Coronavírus em tempo real"
       image="static/icon.png"
-    >
-      <meta
-        name="keywords"
-        content="covid, covid19, coronavirus, brazil, world"
-      />
-    </Head>
+    />
 
     <Layout>
       <Container>
@@ -113,7 +108,7 @@ const HomePage = () => (
                 </p>
               </div>
 
-              <Button href="/404">
+              <Button href="/#">
                 <FiArrowRight size="3.5rem" />
               </Button>
             </RowItem>

@@ -33,18 +33,18 @@ const HeadComponent = ({
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={title} />
+        </>
+      )}
 
-          {image && (
-            <>
-              <meta property="og:image" content={imageParsed} />
-              <meta property="og:image:secure_url" content={imageParsed} />
+      {!noDefaultTags && image && (
+        <>
+          <meta property="og:image" content={imageParsed} />
+          <meta property="og:image:secure_url" content={imageParsed} />
 
-              <meta name="twitter:image" content={imageParsed} />
-              <meta name="twitter:image:src" content={imageParsed} />
+          <meta name="twitter:image" content={imageParsed} />
+          <meta name="twitter:image:src" content={imageParsed} />
 
-              <meta name="image" content={imageParsed} />
-            </>
-          )}
+          <meta name="image" content={imageParsed} />
         </>
       )}
 

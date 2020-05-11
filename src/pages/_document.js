@@ -35,6 +35,11 @@ export default class MyDocument extends Document {
           <meta name="HandheldFriendly" content="True" />
           <meta name="MobileOptimized" content="320" />
 
+          <meta
+            name="keywords"
+            content="covid, covid19, coronavirus, brazil, world"
+          />
+
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Covid Agora" />
