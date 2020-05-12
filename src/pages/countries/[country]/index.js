@@ -12,7 +12,7 @@ import { objectLocaleString } from '~/utils';
 const CountrieInformationPage = ({ country }) => (
   <>
     <Head
-      title={`Covid Agora - ${country.country}`}
+      title={`Covid Agora | ${country.country}`}
       description="Veja como anda o coronavírus no páis onde algum de seus familiares mora ou está."
     />
 
