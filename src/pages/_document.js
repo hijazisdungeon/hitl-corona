@@ -42,6 +42,11 @@ class MyDocument extends Document {
             type="text/css"
             href="/static/css/normalize.css"
           />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/styles.css"
+          />
 
           {/* Google */}
           <script
