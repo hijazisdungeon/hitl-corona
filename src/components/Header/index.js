@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { FiSettings, FiX } from 'react-icons/fi';
-import { useDispatch, useSelector } from 'react-redux';
-
-import { setTheme } from '~/store/reducers/config/actions';
 
 import Link from '../Link';
 import Switch from '../Switch';
@@ -19,9 +16,6 @@ import {
 } from './styles';
 
 const HeaderComponent = () => {
-  const dispatch = useDispatch();
-  const { theme } = useSelector(state => state.config);
-
   const [navbarOpen, setnavbarOpened] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
@@ -79,10 +73,7 @@ const HeaderComponent = () => {
               <div className="container">
                 <strong>Habilitar Modo Zen</strong>
 
-                <Switch
-                  isChecked={theme !== 'light'}
-                  onClick={() => dispatch(setTheme(theme))}
-                />
+                <Switch isChecked={false} onClick={() => {}} />
               </div>
             </div>
           </Section>
