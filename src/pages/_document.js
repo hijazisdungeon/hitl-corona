@@ -56,6 +56,11 @@ export default class MyDocument extends Document {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
 
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-166173584-1"
+          />
+
           {styleElements}
         </Head>
 
