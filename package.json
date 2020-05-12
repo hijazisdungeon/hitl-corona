@@ -18,7 +18,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "moment": "^2.25.3",
-    "next": "^9.3.6",
+    "next": "^9.4.0",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.0",
     "react": "^16.13.1",
