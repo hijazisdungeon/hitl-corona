@@ -12,8 +12,9 @@ class MyApp extends App {
 
     return (
       <ThemeProvider theme={themes.light}>
-        <Component {...pageProps} />
         <GlobalStyle />
+
+        <Component {...pageProps} />
       </ThemeProvider>
     );
   }

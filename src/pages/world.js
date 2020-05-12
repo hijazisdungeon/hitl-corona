@@ -52,7 +52,7 @@ WorldPage.propTypes = {
     confirmed: PropTypes.string,
     deaths: PropTypes.string,
     recovered: PropTypes.string,
-    updated_at: PropTypes.string,
+    updated_at: PropTypes.number,
   }).isRequired,
 };
 

@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import Link from '~/components/Link';
 import Spinner from '~/components/Spinner';
+
+import { loadAnalytics } from '~/utils';
 
 import { Header, Content } from './styles';
 
@@ -13,6 +15,10 @@ const InformationLayout = ({ children, loading }) => {
 
   const paths = router.pathname.split(/\//).filter(p => !!p);
   const redirectPath = paths.slice(0, paths.length - 1).join('/');
+
+  useEffect(() => {
+    loadAnalytics();
+  }, []);
 
   return (
     <>

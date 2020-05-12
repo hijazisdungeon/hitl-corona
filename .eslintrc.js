@@ -43,6 +43,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'consistent-return': 'off',
     'no-nested-ternary': 'off',
+    'react/no-danger': 'off',
     'no-unused-expressions': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
