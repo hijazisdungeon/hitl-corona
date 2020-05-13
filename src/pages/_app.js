@@ -1,8 +1,7 @@
 import App from 'next/app';
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 
-import themes from '~/config/themes';
+import Theme from '~/components/Theme';
 
 import GlobalStyle from '~/styles/global';
 
@@ -11,11 +10,11 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <ThemeProvider theme={themes.light}>
+      <Theme>
         <GlobalStyle />
 
         <Component {...pageProps} />
-      </ThemeProvider>
+      </Theme>
     );
   }
 }

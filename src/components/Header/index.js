@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FiSettings, FiX } from 'react-icons/fi';
 
+import useTheme from '~/hooks/useTheme';
+
 import Link from '../Link';
 import Switch from '../Switch';
 
@@ -16,6 +18,7 @@ import {
 } from './styles';
 
 const HeaderComponent = () => {
+  const { theme, changeTheme } = useTheme();
   const [navbarOpen, setnavbarOpened] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
@@ -73,7 +76,10 @@ const HeaderComponent = () => {
               <div className="container">
                 <strong>Habilitar Modo Zen</strong>
 
-                <Switch isChecked={false} onClick={() => {}} />
+                <Switch
+                  isChecked={theme.name === 'dark'}
+                  onClick={changeTheme}
+                />
               </div>
             </div>
           </Section>
@@ -83,4 +89,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default React.memo(HeaderComponent);

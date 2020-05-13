@@ -26,10 +26,12 @@ const PrivacyPolicyPage = () => (
               clientes ou visitantes que usem a plataforma serão tratadas em
               concordância com a Lei da Proteção de Dados Pessoais de 26 de
               outubro de 1998 (Lei n.º 67/98). O uso do <b>Covid Agora</b>{' '}
+              {/* eslint-disable-next-line no-irregular-whitespace */}
               pressupõe a aceitação deste acordo de privacidade. A equipa do
-              Covid Agora reserva-se ao direito de alterar este acordo sem aviso
-              prévio. Deste modo, recomendamos que consulte a nossa política de
-              privacidade com regularidade de forma a estar sempre atualizado.
+              <b>Covid Agora</b> reserva-se ao direito de alterar este acordo
+              sem aviso prévio. Deste modo, recomendamos que consulte a nossa
+              política de privacidade com regularidade de forma a estar sempre
+              atualizado.
             </p>
           </li>
           <li>
@@ -87,14 +89,14 @@ const PrivacyPolicyPage = () => (
               quaisquer problemas de outros sites que usam o nome{' '}
               <b>Covid Agora</b>. Para saber se o site é legítimo apenas confira
               a equipe de desenvolvimento na pagina de{' '}
-              <a href="/aboutus" target="_blank" rel="noopener">
+              <a href="/aboutus" target="_blank" rel="noopener noreferrer">
                 inforamções sobre a equipe
               </a>{' '}
               ou no repositório no{' '}
               <a
                 href="https://github.com/sweetcodeio"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 github
               </a>
