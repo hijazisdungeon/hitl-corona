@@ -53,9 +53,7 @@ const FooterComponent = () => (
         <NavigationItem>
           <h3>Site</h3>
 
-          <Link href="/#">Termos</Link>
-          <Link href="/#">Privacidade</Link>
-          <Link href="/#">Cookies</Link>
+          <Link href="/privacy-policy">Política de Privacidade</Link>
         </NavigationItem>
       </Navigation>
 

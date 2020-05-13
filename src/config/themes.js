@@ -43,7 +43,7 @@ const themes = {
   },
   light: {
     // Background global
-    background: '#f0f0f5',
+    background: '#fff',
     color: '#fff',
     headerColorResponsive: '#fff',
 

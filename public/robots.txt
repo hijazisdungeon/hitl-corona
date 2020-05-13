@@ -3,5 +3,6 @@ User-agent: *
 Allow: /
 
 Disallow: /404
+Disallow: /construction
 
 Sitemap: https://covidagora.site/sitemap.xml

@@ -24,13 +24,16 @@ const HeadComponent = ({
     />
     <meta
       name="keywords"
-      content="covid, covid19, coronavirus, brazil, world"
+      content="covid, covid19, covid-19, coronavirus, brazil, world, mundo, states, estados, cases, deaths, real-time, information, news, react, nextjs, google, github"
     />
 
     <link itemProp="url" href="https://covidagora.site/" />
     <meta itemProp="name" content={title} />
     <meta itemProp="description" content={description} />
 
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Covid Agora" />
     <meta property="og:url" content={BASE_URL(url)} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -41,7 +44,7 @@ const HeadComponent = ({
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={BASE_URL(image)} />
-    <meta name="twitter:image:src" content="https://covidagora.site/icon.png" />
+    <meta name="twitter:image:src" content={BASE_URL(image)} />
 
     <meta name="description" content={description} />
     <meta name="image" content={BASE_URL(image)} />

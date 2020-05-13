@@ -65,6 +65,7 @@ export const Content = styled.div`
   display: flex;
   width: 100%;
   height: 85px;
+  z-index: ${props => (props.settings_open ? 4 : 2)};
 
   align-items: center;
   justify-content: space-between;
@@ -72,16 +73,14 @@ export const Content = styled.div`
   @media (max-width: 1024px) {
     position: fixed;
     height: calc(100vh - 60px);
+    top: ${props => (props.open ? '60px' : '-100%')};
 
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    z-index: ${props => (props.settings_open ? 4 : 2)};
-    background-color: ${props => props.theme.headerColor};
     transition: top 300ms;
-
-    top: ${props => (props.open ? '60px' : '-100%')};
+    background-color: ${props => props.theme.headerColor};
   }
 `;
 

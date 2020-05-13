@@ -74,7 +74,7 @@ export const Content = styled.ul`
     color: ${props => props.theme.optionsContentText};
     background-color: ${props => props.theme.optionsContent};
     border-radius: 6px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     transition: transform 200ms;
 
     img {
