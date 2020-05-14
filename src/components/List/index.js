@@ -16,7 +16,7 @@ const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
     <ItemsContainer>
       <Item>
         <p style={{ color: '#3baa1b' }}>{info.confirmed}</p>
-        <span>CASOS COMFIRMADOS</span>
+        <span>CASOS CONFIRMADOS</span>
       </Item>
 
       <Item>
