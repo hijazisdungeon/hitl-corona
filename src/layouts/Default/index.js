@@ -19,7 +19,8 @@ const DefaulLayout = ({ children, loading }) => {
       {!loading && <Header />}
 
       <Main>{loading ? <Spinner /> : children}</Main>
-      <Footer />
+
+      {!loading && <Footer />}
     </>
   );
 };
