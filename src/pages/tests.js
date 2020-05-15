@@ -1,59 +1,46 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Polar } from 'react-chartjs-2';
 
 import Layout from '~/layouts/Information';
 
 import Head from '~/components/Head';
-import List from '~/components/List';
 
-import api from '~/services/api';
-import { objectLocaleString } from '~/utils';
+const TestsPage = () => {
+  const [chartData, setChartData] = useState({});
 
-const TestsPage = ({ info }) => (
-  <>
-    <Head
-      title="Covid Agora | Mundo"
-      description="Acompanhe como anda a real situação do coronavírus no mundo."
-      image="static/images/world/flag.png"
-    />
-
-    <Layout loading={!info}>
-      <List
-        local="Tests"
-        flag="/static/images/world/flag.png"
-        lastUpdate={info && info.updated_at}
-        info={info}
-      />
-    </Layout>
-  </>
-);
-
-TestsPage.getInitialProps = async () => {
-  const { data } = await api.get('countries').then(r => r.data);
-
-  return {
-    info: {
-      ...objectLocaleString({
-        cases: data.reduce((a, b) => a + b.cases, 0),
-        confirmed: data.reduce((a, b) => a + b.confirmed, 0),
-        deaths: data.reduce((a, b) => a + b.deaths, 0),
-        recovered: data.reduce((a, b) => a + b.recovered, 0),
-      }),
-      updated_at: data
-        .map(c => Date.parse(c.updated_at))
-        .sort((a, b) => a - b)[0],
-    },
+  const chart = () => {
+    setChartData({
+      labels: ['Confirmados', 'Suspeitos', 'Óbitos', 'Curados'],
+      datasets: [
+        {
+          label: 'Nível de avanço da doença',
+          data: [4505510, 2575034, 304835, 1618806],
+          backgroundColor: [
+            'rgba(75,192,192,0.6)',
+            'rgba(75,22,192,0.6)',
+            'rgba(44,225,55,0.6)',
+            'rgba(546,225,55,0.6)',
+          ],
+        },
+      ],
+    });
   };
-};
+  useEffect(() => {
+    chart();
+  }, []);
 
-TestsPage.propTypes = {
-  info: PropTypes.shape({
-    cases: PropTypes.string,
-    confirmed: PropTypes.string,
-    deaths: PropTypes.string,
-    recovered: PropTypes.string,
-    updated_at: PropTypes.string,
-  }).isRequired,
+  return (
+    <>
+      <Head
+        title="Covid Agora | Mundo"
+        description="Acompanhe como anda a real situação do coronavírus no mundo."
+        image="static/images/world/flag.png"
+      />
+      <Layout>
+        <Polar data={chartData} />
+      </Layout>
+    </>
+  );
 };
 
 export default TestsPage;
