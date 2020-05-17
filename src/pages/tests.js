@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Polar } from 'react-chartjs-2';
+import { Doughnut, Line } from 'react-chartjs-2';
 
 import Layout from '~/layouts/Information';
 
@@ -16,10 +16,10 @@ const TestsPage = () => {
           label: 'Nível de avanço da doença',
           data: [4505510, 2575034, 304835, 1618806],
           backgroundColor: [
-            'rgba(75,192,192,0.6)',
-            'rgba(75,22,192,0.6)',
-            'rgba(44,225,55,0.6)',
-            'rgba(546,225,55,0.6)',
+            'rgba(0, 255, 89,0.9)',
+            'rgba(255, 200, 0,0.9)',
+            'rgba(255, 51, 0,0.9)',
+            'rgba(0, 145, 255,0.9)',
           ],
         },
       ],
@@ -37,7 +37,8 @@ const TestsPage = () => {
         image="static/images/world/flag.png"
       />
       <Layout>
-        <Polar data={chartData} />
+        <Doughnut data={chartData} />
+        <Line data={chartData} />
       </Layout>
     </>
   );
