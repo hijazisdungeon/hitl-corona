@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "name": "corona",
+  "alias": "www.covidagora.com",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
