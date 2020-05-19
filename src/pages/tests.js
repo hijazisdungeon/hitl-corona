@@ -16,5 +16,4 @@ const TestsPage = () => {
     </>
   );
 };
-
 export default TestsPage;
