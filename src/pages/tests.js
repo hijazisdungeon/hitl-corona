@@ -13,6 +13,7 @@ const TestsPage = () => {
         image="static/images/world/flag.png"
       />
       <Layout />
+      <h1>Teste</h1>
     </>
   );
 };
