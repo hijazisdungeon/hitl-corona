@@ -7,22 +7,19 @@ import Head from '~/components/Head';
 
 import { newsApi } from '~/services/api';
 
-const TestsPage = ({ news }) => {
-  console.log(news);
+const TestsPage = ({ news }) => (
+  <>
+    <Head
+      title="Covid Agora | Notícias"
+      description="Acompanhe como anda a real situação do coronavírus no mundo."
+      image="static/images/world/flag.png"
+    />
 
-  return (
-    <>
-      <Head
-        title="Covid Agora | Mundo"
-        description="Acompanhe como anda a real situação do coronavírus no mundo."
-        image="static/images/world/flag.png"
-      />
-      <Layout>
-        <span />
-      </Layout>
-    </>
-  );
-};
+    <Layout>
+      <span />
+    </Layout>
+  </>
+);
 
 TestsPage.getInitialProps = async () => {
   const { data } = await newsApi.get('');
