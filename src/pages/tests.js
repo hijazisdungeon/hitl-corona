@@ -15,9 +15,7 @@ const TestsPage = ({ news }) => (
       image="static/images/world/flag.png"
     />
 
-    <Layout>
-      <span />
-    </Layout>
+    <Layout />
   </>
 );
 
