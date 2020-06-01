@@ -21,8 +21,29 @@ const TestsPage = () => {
           <NewsContainer>
             <NewsItems>
               <img src={data.articles.image} alt="logo" />
-              <h1 style={{ color: '#000' }}>{data.articles.title}</h1>
-              <span>{data.articles.description}</span>
+              <h1 style={{ color: '#000' }}>
+                {data.articles.title}
+
+                <p>{data.articles.description}</p>
+                <p>{data.articles.autor}</p>
+              </h1>
+
+              <a href="##" rel="noopener noreferrer">
+                Leia mais...
+              </a>
+            </NewsItems>
+            <NewsItems>
+              <img src={data.articles.image} alt="logo" />
+              <h1 style={{ color: '#000' }}>
+                {data.articles.title}
+
+                <p>{data.articles.description}</p>
+                <p>{data.articles.autor}</p>
+              </h1>
+
+              <a href="##" rel="noopener noreferrer">
+                Leia mais...
+              </a>
             </NewsItems>
           </NewsContainer>
         </Container>

@@ -13,20 +13,37 @@ export const NewsContainer = styled.div`
 
 export const NewsItems = styled.div`
   width: 450px;
+
   padding: 5px;
   display: flex;
-  position: relative;
-  justify-content: center;
 
-  border-radius: 3px;
+  border-radius: 5px;
   background: #e8e8e8;
+  margin: 10px;
 
   h1 {
     margin: 5px 5px;
     font-size: 2rem;
+    p {
+      font-size: 1.5rem;
+      padding: 5px;
+      font-weight: 200;
+      color: #a1a1a1;
+    }
   }
-  span {
-    color: #a1a1a1;
+
+  a {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: flex-end;
+    color: #0a8cf7;
+    margin-top: 50px;
+    border-bottom: 1px solid #0a8cf7;
+  }
+  a:hover {
+    transition: 800ms;
+    color: #0adbf7;
   }
 
   img {
