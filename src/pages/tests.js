@@ -1,14 +1,18 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import data from '~/data/newsTests';
+// import data from '~/data/newsTests';
 
 import Layout from '~/layouts/Information';
 
 import Head from '~/components/Head';
 
+import { newsApi } from '~/services/api';
+
 import { Container, NewsContainer, NewsItems } from '~/styles/pages/tests';
 
-const TestsPage = () => {
+const TestsPage = ({ news }) => {
+  console.log(news);
   return (
     <>
       <Head
@@ -20,25 +24,12 @@ const TestsPage = () => {
         <Container>
           <NewsContainer>
             <NewsItems>
-              <img src={data.articles.image} alt="logo" />
+              <img src={news.articles.urlToImage} alt="logo" />
               <h1 style={{ color: '#000' }}>
-                {data.articles.title}
+                {news.articles.content}
 
-                <p>{data.articles.description}</p>
-                <p>{data.articles.autor}</p>
-              </h1>
-
-              <a href="##" rel="noopener noreferrer">
-                Leia mais...
-              </a>
-            </NewsItems>
-            <NewsItems>
-              <img src={data.articles.image} alt="logo" />
-              <h1 style={{ color: '#000' }}>
-                {data.articles.title}
-
-                <p>{data.articles.description}</p>
-                <p>{data.articles.autor}</p>
+                <p>{news.articles.description}</p>
+                <p>{news.articles.autor}</p>
               </h1>
 
               <a href="##" rel="noopener noreferrer">
@@ -50,6 +41,18 @@ const TestsPage = () => {
       </Layout>
     </>
   );
+};
+
+TestsPage.getInitialProps = async () => {
+  const { data } = await newsApi.get('');
+
+  return { news: data };
+};
+
+TestsPage.propTypes = {
+  news: PropTypes.shape({
+    articles: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 };
 
 export default TestsPage;
