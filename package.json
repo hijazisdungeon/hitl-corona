@@ -12,6 +12,9 @@
     "prettier": "prettier --check src/**/*.{js,jsx}",
     "prettier:fix": "prettier --write src/**/*.{js,jsx}"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "moment": "^2.25.3",
