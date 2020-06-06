@@ -14,7 +14,7 @@ const FooterComponent = () => (
           <Link href="/world">Mundo</Link>
           <Link href="/countries">Países</Link>
           <Link href="/states">Estados</Link>
-          <Link href="/#">Notícias</Link>
+          <Link href="/news">Notícias</Link>
         </NavigationItem>
 
         <NavigationItem>

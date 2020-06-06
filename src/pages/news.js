@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { FiArrowRight } from 'react-icons/fi';
 
 import Layout from '~/layouts/Information';
 
@@ -7,7 +8,9 @@ import Head from '~/components/Head';
 
 import { newsApi } from '~/services/api';
 
-const TestsPage = ({ news }) => (
+import { Container, ArticlesContainer, ArticleItem } from '~/styles/pages/news';
+
+const NewsPage = ({ articles }) => (
   <>
     <Head
       title="Covid Agora | Notícias"
@@ -15,20 +18,49 @@ const TestsPage = ({ news }) => (
       image="static/images/world/flag.png"
     />
 
-    <Layout />
+    <Layout loading={!articles || !articles.length}>
+      <Container>
+        <ArticlesContainer>
+          {articles.map(article => (
+            <ArticleItem key={article.url}>
+              <img
+                src={
+                  article.urlToImage ||
+                  'https://cdn.discordapp.com/attachments/607000026257948683/718927311579250789/default-image.jpg'
+                }
+                alt="Article"
+              />
+
+              <h1>{article.title}</h1>
+              <p>{article.description}</p>
+
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  justifyContent: 'flex-end',
+                }}
+              >
+                <a href={article.url} rel="noopener noreferrer" target="_blank">
+                  LEIA COMPLETO <FiArrowRight size="1.6rem" />
+                </a>
+              </div>
+            </ArticleItem>
+          ))}
+        </ArticlesContainer>
+      </Container>
+    </Layout>
   </>
 );
 
-TestsPage.getInitialProps = async () => {
-  const { data } = await newsApi.get('');
+NewsPage.getInitialProps = async () => {
+  const { articles } = await newsApi.get('').then(r => r.data);
 
-  return { news: data };
+  return { articles };
 };
 
-TestsPage.propTypes = {
-  news: PropTypes.shape({
-    articles: PropTypes.arrayOf(PropTypes.shape({})),
-  }).isRequired,
+NewsPage.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-export default TestsPage;
+export default NewsPage;

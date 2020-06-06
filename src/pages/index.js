@@ -107,7 +107,7 @@ const HomePage = () => (
                 </p>
               </div>
 
-              <Button href="/#">
+              <Button href="/news">
                 <FiArrowRight size="3.5rem" />
               </Button>
             </RowItem>
