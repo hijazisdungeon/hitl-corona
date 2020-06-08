@@ -37,11 +37,17 @@ const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
       )} */}
     </ItemsContainer>
 
-    <p style={{ fontSize: '1.3rem' }}>
+    <p style={{ fontSize: '1.5rem' }}>
       Ùltima Atualização:{' '}
       <strong>
         {moment(lastUpdate).locale('pt-br', localization).format('LLL')}
       </strong>
+    </p>
+    <p style={{ fontSize: '1.3rem', margin: '25px' }}>
+      *Os números de <b>Suspeitos</b> & <b>Curados</b> foram removidos por
+      motivos desconhecidos do site do governo portanto nós da{' '}
+      <b>Covid Agora</b> achamos necessário remover os dados e atualizar o
+      site.*
     </p>
   </Container>
 );
