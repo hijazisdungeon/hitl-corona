@@ -21,7 +21,7 @@ const NewsPage = ({ articles = [] }) => (
     <Layout loading={!articles || !articles.length}>
       <Container>
         <ArticlesContainer>
-          {articles && articles.map(article => (
+          {articles && articles.length && articles.map(article => (
             <ArticleItem key={article.url}>
               <img
                 src={
@@ -54,9 +54,12 @@ const NewsPage = ({ articles = [] }) => (
 );
 
 NewsPage.getInitialProps = async () => {
-  const { articles } = await newsApi.get('').then(r => r.data);
-
-  return { articles };
+  try {
+    const { articles } = await newsApi.get('').then(r => r.data);
+    return { articles };
+  } catch (e) { 
+    return { articles: [] };
+ }
 };
 
 NewsPage.propTypes = {
