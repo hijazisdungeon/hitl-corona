@@ -19,22 +19,22 @@ const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
         <span>CASOS CONFIRMADOS</span>
       </Item>
 
-      <Item>
+      {/* <Item>
         <p style={{ color: '#eac822' }}>{info.cases}</p>
         <span>SUSPEITOS</span>
-      </Item>
+      </Item> */}
 
       <Item>
         <p style={{ color: '#d51616' }}>{info.deaths}</p>
         <span>ÓBITOS</span>
       </Item>
 
-      {info.recovered && (
-        <Item>
-          <p style={{ color: '#1678d5' }}>{info.recovered}</p>
-          <span>CURADOS</span>
-        </Item>
-      )}
+      {/* {info.recovered && (
+        // <Item>
+        //   <p style={{ color: '#1678d5' }}>{info.recovered}</p>
+        //   <span>CURADOS</span>
+        // </Item>
+      )} */}
     </ItemsContainer>
 
     <p style={{ fontSize: '1.3rem' }}>
