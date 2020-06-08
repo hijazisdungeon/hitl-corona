@@ -18,7 +18,7 @@ const NewsPage = ({ articles }) => (
       image="static/images/world/flag.png"
     />
 
-    <Layout loading={!articles || !articles.length}>
+    <Layout loading={!articles.length}>
       <Container>
         <ArticlesContainer>
           {articles.map(article => (
