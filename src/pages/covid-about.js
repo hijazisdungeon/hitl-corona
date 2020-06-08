@@ -59,11 +59,20 @@ const AboutCovid = () => (
             src="/static/images/aboutcovid/covid-alcool.png"
             alt="Covid Alcool"
           />
-          <p>Use alcool em gel.</p>
+          <p>Use alcool em gel</p>
+        </div>
+
+        <div>
           <img src="/static/images/aboutcovid/crowd.png" alt="crowd" />
           <p>Evite aglomerações</p>
+        </div>
+
+        <div>
           <img src="/static/images/aboutcovid/mascara.png" alt="Mascara" />
           <p>Use Máscara</p>
+        </div>
+
+        <div>
           <img src="/static/images/aboutcovid/window.png" alt="Janela" />
           <p>Deixe o ambiente arejado.</p>
         </div>

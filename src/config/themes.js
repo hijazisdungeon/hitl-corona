@@ -41,6 +41,9 @@ export const light = {
   settingsText: '#000',
   borderDivisor: '#000',
   settingsClose: '#000',
+
+  // Sobre o coronaviurs page
+  paragrafos: '#000',
 };
 
 export const dark = {
@@ -86,4 +89,7 @@ export const dark = {
   settingsText: '#fff',
   borderDivisor: '#fff',
   settingsClose: '#fff',
+
+  // Sobre o coronaviurs page
+  paragrafos: '#fff',
 };

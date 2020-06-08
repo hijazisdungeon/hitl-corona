@@ -33,28 +33,31 @@ export const Container = styled.div`
         line-height: 2;
         margin: 10px 0;
         text-align: justify;
-        color: #000;
+        color: ${props => props.theme.paragrafos};
       }
     }
   }
 `;
 export const ImageContainer = styled.div`
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-
-  img {
-    background-color: #b9d6f2;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-  }
-  p {
-    font-size: 1.9rem;
-    margin: 10px 0;
-    text-align: justify;
-    color: #000;
+  & > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    img {
+      background-color: #d4d2d2;
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
+    p {
+      font-size: 1.9rem;
+      margin: 10px;
+      color: ${props => props.theme.paragrafos};
+    }
   }
 `;
