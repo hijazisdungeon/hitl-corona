@@ -10,7 +10,7 @@ import { newsApi } from '~/services/api';
 
 import { Container, ArticlesContainer, ArticleItem } from '~/styles/pages/news';
 
-const NewsPage = ({ articles }) => (
+const NewsPage = ({ articles = [] }) => (
   <>
     <Head
       title="Covid Agora | Notícias"
@@ -18,10 +18,10 @@ const NewsPage = ({ articles }) => (
       image="static/images/world/flag.png"
     />
 
-    <Layout loading={!articles.length}>
+    <Layout loading={!articles || !articles.length}>
       <Container>
         <ArticlesContainer>
-          {articles.map(article => (
+          {articles && articles.map(article => (
             <ArticleItem key={article.url}>
               <img
                 src={
