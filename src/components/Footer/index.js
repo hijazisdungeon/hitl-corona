@@ -15,6 +15,7 @@ const FooterComponent = () => (
           <Link href="/countries">Países</Link>
           <Link href="/states">Estados</Link>
           <Link href="/news">Notícias</Link>
+          <Link href="/covid-about">O que é coronavírus ?</Link>
         </NavigationItem>
 
         <NavigationItem>

@@ -53,6 +53,9 @@ const HeaderComponent = () => {
             <li>
               <Link href="/news">Notícias</Link>
             </li>
+            <li>
+              <Link href="/covid-about">O que é Coronavirus ?</Link>
+            </li>
           </ul>
         </Navigation>
 
