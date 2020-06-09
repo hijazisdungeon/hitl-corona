@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const SpinnerComponent = ({ color = '#0353a4' }) => <Container color={color} />;
+const SpinnerComponent = ({ color = '#0353a4' }) => (
+  <Container color={color}>
+    <p>Aguarde enquanto processamos os dados...</p>
+  </Container>
+);
 
 const spinnerAnimation = keyframes`
   0% {
