@@ -64,7 +64,7 @@ const FooterComponent = () => (
         <strong>© 2020 SweetCode</strong>
 
         <a
-          href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=64TE2A4STHKBY&source=url"
+          href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=heilhijazi%40outlook.com&currency_code=BRL&source=url"
           target="_blank"
           rel="noopener noreferrer"
         >
