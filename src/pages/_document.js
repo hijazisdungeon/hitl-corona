@@ -46,8 +46,8 @@ class MyDocument extends Document {
 
           {/* Google */}
           <script
-            async
             data-ad-client="ca-pub-2725246876757935"
+            async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
           <script
