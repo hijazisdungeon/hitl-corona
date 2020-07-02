@@ -1,6 +1,7 @@
 [build]
-  command = "next build && next export"
-  publish = "out"
+  command   = "next build && next-on-netlify"
+  functions = "out_functions"
+  publish   = "out_publish"
 
 [[plugins]]
   package = "netlify-plugin-image-optim"
