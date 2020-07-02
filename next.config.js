@@ -16,6 +16,7 @@ module.exports = composePlugins(
   ],
   {
     distDir: '__next',
+    target: 'serverless',
     devIndicators: {
       autoPrerender: false,
     },
