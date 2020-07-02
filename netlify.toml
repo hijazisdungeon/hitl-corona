@@ -1,0 +1,16 @@
+[build]
+  command = "next build && next export"
+  publish = "out"
+
+[[plugins]]
+  package = "netlify-plugin-image-optim"
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+
+	[plugins.inputs]
+    baseUrl = "https://covidagora.site/"
+    sitemapPath = "/sitemap.xml"
+    providers = [
+      "google"
+    ]
