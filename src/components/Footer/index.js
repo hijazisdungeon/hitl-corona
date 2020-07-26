@@ -23,7 +23,7 @@ const FooterComponent = () => (
 
           <Link href="/aboutus">Sobre Nós</Link>
           <a
-            href="https://github.com/sweetcodeio"
+            href="https://github.com/hitechline"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -61,7 +61,7 @@ const FooterComponent = () => (
       <hr />
 
       <Content>
-        <strong>© 2020 SweetCode</strong>
+        <strong>© 2020 Hitechline</strong>
 
         <a
           href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=heilhijazi%40outlook.com&currency_code=BRL&source=url"

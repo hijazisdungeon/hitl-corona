@@ -26,7 +26,7 @@ const AboutUsPage = () => {
 
   useEffect(() => {
     async function getMembers() {
-      const { data } = await githubApi.get('orgs/sweetcodeio/members');
+      const { data } = await githubApi.get('orgs/hitechline/members');
 
       setMembers(
         data.map(member => Object.assign(member, developers[member.login])),
@@ -62,7 +62,7 @@ const AboutUsPage = () => {
 
             <div>
               <h1>
-                Sweet<span>Code</span>
+                Hitech<span>line</span>
               </h1>
               <p>
                 Desenvolvedora oficial do <span>Covid Agora</span>
