@@ -5699,10 +5699,10 @@ next-on-netlify@^2.3.0:
     fs-extra "^9.0.0"
     next-aws-lambda "^2.4.1"
 
-next-optimized-images@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.6.0.tgz#10ae5feca4148d3abe4a6781e304bcb1d5c3c557"
-  integrity sha512-z+dASQLXIJPrc1iBt+jm5bravXud3nZ3de3Y3HgUNpJNUdkweym91dvKVgmvpXkEaNzExArybuSVNhOB2vR5qA==
+next-optimized-images@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.6.2.tgz#8974a2186758c50e1a263c6866dbec5c25280db5"
+  integrity sha512-yH/f3eLmoQ/TxvWRiSuM6AuF3tR1s4nePdHPTm9gl4lAaGEKxTGaSuUL+ZxE5j/c/ITrnHVHibQzOz1Jl8euQw==
   dependencies:
     chalk "^2.4.2"
     figures "^3.0.0"
