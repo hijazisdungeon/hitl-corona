@@ -1281,7 +1281,7 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@sls-next/lambda-at-edge@^1.5.1":
+"@sls-next/lambda-at-edge@^1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@sls-next/lambda-at-edge/-/lambda-at-edge-1.5.2.tgz#038386f8226c041cf0f15f2c2dcd27026e8c3cfb"
   integrity sha512-ZPaooGQgyDgJo5ja1V63bSFEvB8BWEDp/AWhNTfZo00wFB4eFmDwcUmWHrj0sGcyuGSjZeDJVKYK4ampHC0Ugg==
@@ -2563,6 +2563,11 @@ commander@^2.18.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
+commander@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-6.1.0.tgz#f8d722b78103141006b66f4c7ba1e97315ba75bc"
+  integrity sha512-wl7PNrYWd2y5mp1OK/LhTlv8Ff4kQJQRXXAvF+uU/TPNiVJUxZLRYGj/B0y/lPGAVcSbJqH2Za/cvHmrPMC8mA==
 
 commander@~2.8.1:
   version "2.8.1"
@@ -5661,12 +5666,13 @@ next-compose-plugins@2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
-next-on-netlify@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/next-on-netlify/-/next-on-netlify-2.3.2.tgz#e1dbe7151d5dd3b14d40844c7cbd1d09dbbec025"
-  integrity sha512-Zkn0KzS/wtu3AWk5y/4M6SdubqijGk7NTR260/u7zl9VilshpbxWcGIeDKZ60aZU4UR0M8doNDx1ggmvOBOhkw==
+next-on-netlify@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/next-on-netlify/-/next-on-netlify-2.4.0.tgz#fa91cb6ebec7affe322f43d9601693f640ce5769"
+  integrity sha512-tYK5V/aHRPTIln4511BEjAcXRfgm/lAH6JnDx34nh8atYTUpz4NY12pQveIlyra2mBB7flrUU1LHaWGm67u4UA==
   dependencies:
-    "@sls-next/lambda-at-edge" "^1.5.1"
+    "@sls-next/lambda-at-edge" "^1.5.2"
+    commander "^6.0.0"
     fs-extra "^9.0.1"
     next-aws-lambda "^2.5.0"
 
