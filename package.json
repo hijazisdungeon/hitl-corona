@@ -19,7 +19,7 @@
     "axios": "0.20.0",
     "i18next": "19.8.2",
     "moment": "2.29.1",
-    "next": "9.5.3",
+    "next": "9.5.4",
     "next-on-netlify": "2.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -27,7 +27,7 @@
     "styled-components": "5.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "9.5.3",
+    "@next/bundle-analyzer": "9.5.4",
     "@zeit/next-source-maps": "0.0.3",
     "babel-plugin-root-import": "6.5.0",
     "babel-plugin-styled-components": "1.11.1",
