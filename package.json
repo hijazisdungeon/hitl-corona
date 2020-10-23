@@ -29,7 +29,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "9.5.5",
     "@zeit/next-source-maps": "0.0.3",
-    "babel-plugin-root-import": "6.5.0",
+    "babel-plugin-root-import": "6.6.0",
     "babel-plugin-styled-components": "1.11.1",
     "cross-env": "7.0.2",
     "eslint": "7.11.0",
