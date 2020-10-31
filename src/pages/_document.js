@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, Html, NextScript } from 'next/document';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -18,11 +18,9 @@ class MyDocument extends Document {
     const { styleElements } = this.props;
 
     return (
-      <html lang="pt-BR">
+      <Html lang="pt-BR">
         <Head>
           <meta charSet="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <meta name="theme-color" content="#006daa" />
           <meta name="author" content="SweetCode Team" />
@@ -83,10 +81,9 @@ class MyDocument extends Document {
 
         <body>
           <Main />
-
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

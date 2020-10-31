@@ -21,32 +21,38 @@ const NewsPage = ({ articles = [] }) => (
     <Layout loading={!articles || !articles.length}>
       <Container>
         <ArticlesContainer>
-          {articles && articles.length && articles.map(article => (
-            <ArticleItem key={article.url}>
-              <img
-                src={
-                  article.urlToImage ||
-                  'https://cdn.discordapp.com/attachments/607000026257948683/718927311579250789/default-image.jpg'
-                }
-                alt="Article"
-              />
+          {articles &&
+            articles.length &&
+            articles.map(article => (
+              <ArticleItem key={article.url}>
+                <img
+                  src={
+                    article.urlToImage ||
+                    'https://cdn.discordapp.com/attachments/607000026257948683/718927311579250789/default-image.jpg'
+                  }
+                  alt="Article"
+                />
 
-              <h1>{article.title}</h1>
-              <p>{article.description}</p>
+                <h1>{article.title}</h1>
+                <p>{article.description}</p>
 
-              <div
-                style={{
-                  display: 'flex',
-                  width: '100%',
-                  justifyContent: 'flex-end',
-                }}
-              >
-                <a href={article.url} rel="noopener noreferrer" target="_blank">
-                  LEIA COMPLETO <FiArrowRight size="1.6rem" />
-                </a>
-              </div>
-            </ArticleItem>
-          ))}
+                <div
+                  style={{
+                    display: 'flex',
+                    width: '100%',
+                    justifyContent: 'flex-end',
+                  }}
+                >
+                  <a
+                    href={article.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    LEIA COMPLETO <FiArrowRight size="1.6rem" />
+                  </a>
+                </div>
+              </ArticleItem>
+            ))}
         </ArticlesContainer>
       </Container>
     </Layout>
@@ -57,9 +63,9 @@ NewsPage.getInitialProps = async () => {
   try {
     const { articles } = await newsApi.get('').then(r => r.data);
     return { articles };
-  } catch (e) { 
+  } catch (e) {
     return { articles: [] };
- }
+  }
 };
 
 NewsPage.propTypes = {
