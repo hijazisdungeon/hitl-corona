@@ -1,11 +1,13 @@
+const { resolve } = require('path');
+
 module.exports = {
   presets: ['next/babel'],
   plugins: [
     [
       'root-import',
       {
-        rootPathSuffix: 'src',
         rootPathPrefix: '~',
+        rootPathSuffix: resolve(__dirname, 'src'),
       },
     ],
     [
