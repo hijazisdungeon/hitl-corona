@@ -5886,10 +5886,10 @@ next-aws-lambda@^2.5.0:
   resolved "https://registry.yarnpkg.com/next-aws-lambda/-/next-aws-lambda-2.5.0.tgz#66067ca3a59524e87579cfc5c19cad17eba1329e"
   integrity sha512-TKI0e+RFOuevQnkliE73VCzx9VRF8qpXuL18uxOJvPhCe09pxLwfaDQMuNKf3b2d9PS/Ajn+Y/O41bBuJMu4aA==
 
-next-compose-plugins@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
-  integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
+next-compose-plugins@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.1.tgz#020fc53f275a7e719d62521bef4300fbb6fde5ab"
+  integrity sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
 
 next-on-netlify@2.6.0:
   version "2.6.0"
