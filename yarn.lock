@@ -5891,10 +5891,10 @@ next-compose-plugins@2.2.1:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.1.tgz#020fc53f275a7e719d62521bef4300fbb6fde5ab"
   integrity sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
 
-next-on-netlify@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/next-on-netlify/-/next-on-netlify-2.6.0.tgz#a0a8b7b18c7503da62a63d75f73adeb83ae9b3c6"
-  integrity sha512-33uvHruvSqxcEdYoYRF+OoOarXssDU3eAGdlg8xQ2/QIFiJMysE8Gr+utxgbKWsgZJ8SIT45T+tyCFwGeuTvDg==
+next-on-netlify@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/next-on-netlify/-/next-on-netlify-2.6.1.tgz#eb10e1aed37f60269de1b4bff5334b0c2098786d"
+  integrity sha512-EtJFFpC0WnbVoUWrzX7QBYezjY7oDyHvi/RP+wmlQDYkJy33JQmkuqG5/aGApVWJNXmzvm+kaZKVqG7xCp8jyA==
   dependencies:
     "@sls-next/lambda-at-edge" "^1.5.2"
     commander "^6.0.0"
