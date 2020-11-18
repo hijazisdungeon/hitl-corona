@@ -20,7 +20,7 @@
     "i18next": "19.8.3",
     "moment": "2.29.1",
     "next": "10.0.2",
-    "next-on-netlify": "2.6.2",
+    "next-on-netlify": "2.6.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "3.11.0",
