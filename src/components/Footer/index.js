@@ -61,15 +61,11 @@ const FooterComponent = () => (
       <hr />
 
       <Content>
-        <strong>© 2020 Hitechline</strong>
-
-        <a
-          href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=heilhijazi%40outlook.com&currency_code=BRL&source=url"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Doe pra Gente
-        </a>
+        <strong>
+          {' '}
+          Copyright © 2020 - {new Date().getFullYear()} CovidAgora - Todos os
+          direitos
+        </strong>
       </Content>
     </div>
   </Container>
