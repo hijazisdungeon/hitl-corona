@@ -18,7 +18,7 @@ const ConstructionPage = () => (
           <h1>EM BREVE !</h1>
           <h2>
             Aplicativo em desenvolvimento pela equipe{' '}
-            <span style={{ color: '#000' }}>SweetCode</span>.
+            <span style={{ color: '#000' }}>Hitechline</span>.
           </h2>
 
           <BackButton href="/">
