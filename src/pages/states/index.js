@@ -24,7 +24,7 @@ const StatesPage = ({ states: allStates }) => {
 
       setStates(filteredCountries);
     },
-    [states],
+    [allStates],
   );
 
   return (

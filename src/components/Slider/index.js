@@ -10,13 +10,17 @@ const SliderComponent = ({ images }) => {
     setSelected(oldSelected => {
       return oldSelected === images.length - 1 ? 0 : oldSelected + 1;
     });
-  }, [selected]);
+  }, [images.length]);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       handleChange();
     }, 7000);
-  }, []);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [handleChange]);
 
   return (
     <Container>
