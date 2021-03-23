@@ -37,11 +37,16 @@ CountrieInformationPage.getInitialProps = async ({
   try {
     const { data } = await api.get(`/${country}`).then(r => r.data);
 
-    if (data.error || !Object.keys(data).length) return back();
+    if (data.error || !Object.keys(data).length) {
+      throw new Error('Ocorreu um erro ao obter os dados.');
+    }
 
-    return { country: objectLocaleString(data) };
-  } catch (e) {
+    return {
+      country: objectLocaleString(data),
+    };
+  } catch {
     back();
+    return {};
   }
 };
 

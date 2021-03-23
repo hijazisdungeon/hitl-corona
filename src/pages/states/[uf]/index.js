@@ -34,7 +34,9 @@ StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
   try {
     const data = await api.get(`brazil/uf/${uf}`).then(r => r.data);
 
-    if (data.error) return back();
+    if (data.error) {
+      throw new Error('Ocorreu um erro ao obter os dados.');
+    }
 
     return {
       state: objectLocaleString({
@@ -43,8 +45,9 @@ StateInformationPage.getInitialProps = async ({ query: { uf }, res }) => {
         confirmed: data.cases,
       }),
     };
-  } catch (e) {
+  } catch {
     back();
+    return {};
   }
 };
 
