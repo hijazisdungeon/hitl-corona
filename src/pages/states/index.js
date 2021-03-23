@@ -2,13 +2,10 @@ import PropTypes from 'prop-types';
 import React, { useState, useCallback } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import Layout from '~/layouts/Information';
-
 import Head from '~/components/Head';
 import Link from '~/components/Link';
-
+import Layout from '~/layouts/Information';
 import api from '~/services/api';
-
 import {
   Container,
   SearchContainer,

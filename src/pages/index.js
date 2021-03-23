@@ -1,12 +1,10 @@
 import React from 'react';
 import { FiArrowRight, FiArrowDown } from 'react-icons/fi';
 
-import Layout from '~/layouts/Default';
-
 import Head from '~/components/Head';
 import Link from '~/components/Link';
 import Slider from '~/components/Slider';
-
+import Layout from '~/layouts/Default';
 import {
   Container,
   Content,

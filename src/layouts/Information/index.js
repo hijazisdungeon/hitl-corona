@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
+import { Header, Content } from './styles';
+
 import Link from '~/components/Link';
 import Spinner from '~/components/Spinner';
-
 import { loadAnalytics } from '~/utils';
-
-import { Header, Content } from './styles';
 
 const InformationLayout = ({ children, loading }) => {
   const router = useRouter();

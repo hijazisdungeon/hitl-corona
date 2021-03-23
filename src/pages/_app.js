@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React from 'react';
 
 import Theme from '~/components/Theme';
-
 import GlobalStyle from '~/styles/global';
 
 class MyApp extends App {

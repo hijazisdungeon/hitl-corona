@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Layout from '~/layouts/Information';
-
 import Head from '~/components/Head';
 import List from '~/components/List';
-
+import Layout from '~/layouts/Information';
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 

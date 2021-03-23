@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Layout from '~/layouts/Default';
-
 import Head from '~/components/Head';
-
+import Layout from '~/layouts/Default';
 import { Container } from '~/styles/pages/privacy-policy';
 
 const PrivacyPolicyPage = () => (
