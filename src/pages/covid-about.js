@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Layout from '~/layouts/Information';
-
 import { Container, ImageContainer } from '~/styles/pages/covid-about';
 
 const AboutCovid = () => (
@@ -53,6 +52,7 @@ const AboutCovid = () => (
           </li>
         </ol>
       </Container>
+
       <ImageContainer>
         <div>
           <img

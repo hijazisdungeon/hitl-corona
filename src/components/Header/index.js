@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { FiSettings, FiX } from 'react-icons/fi';
 
-import useTheme from '~/hooks/useTheme';
-
 import Link from '../Link';
 import Switch from '../Switch';
-
 import {
   Container,
   BrandsContainer,
@@ -16,6 +13,8 @@ import {
   Section,
   Navigation,
 } from './styles';
+
+import useTheme from '~/hooks/useTheme';
 
 const HeaderComponent = () => {
   const { theme, changeTheme } = useTheme();

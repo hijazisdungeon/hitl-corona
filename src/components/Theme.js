@@ -2,9 +2,12 @@ import PropTypes from 'prop-types';
 import React, { createContext, useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { light, dark } from '~/config/themes';
+import * as themes from '~/config/themes';
+
+const { dark, light } = themes;
 
 const themeKey = '@CovidAgora:Theme';
+const themeNames = Object.keys(themes);
 
 export const ThemeContext = createContext({
   theme: light,
@@ -27,14 +30,17 @@ const ThemeComponent = ({ children }) => {
       const themeName = localStorage.getItem(themeKey);
 
       if (themeName !== theme.name) {
-        setTheme(
-          themeName === 'light' ? light : themeName === 'dark' ? dark : light,
-        );
+        const currentTheme = themeNames[themeName];
+
+        setTheme(currentTheme || light);
       }
     }
 
     resolveTheme();
     window.addEventListener('storage', resolveTheme);
+
+    // Só precisa ser executado 1 vez
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { FaGithub, FaDiscord, FaInstagram } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 
-import developers from '~/data/developers';
-
-import Layout from '~/layouts/Default';
-
 import Head from '~/components/Head';
 import Link from '~/components/Link';
 import Slider from '~/components/Slider';
-
+import developers from '~/data/developers';
+import Layout from '~/layouts/Default';
 import { githubApi } from '~/services/api';
-
 import {
   Container,
   Content,

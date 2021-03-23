@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Link from '../Link';
-
 import { Container, Content, Navigation, NavigationItem } from './styles';
 
 const FooterComponent = () => (

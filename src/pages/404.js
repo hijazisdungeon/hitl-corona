@@ -3,7 +3,6 @@ import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import Layout from '~/layouts/Default';
-
 import { Container, Content, BackButton } from '~/styles/pages/404';
 
 const NotFoundPage = () => (
