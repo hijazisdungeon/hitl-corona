@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "axios": "0.21.1",
-    "i18next": "20.2.4",
+    "i18next": "20.3.0",
     "moment": "2.29.1",
     "next": "10.2.0",
     "next-on-netlify": "2.9.0",
