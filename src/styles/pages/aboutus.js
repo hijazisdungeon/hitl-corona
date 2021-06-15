@@ -123,13 +123,15 @@ export const Section = styled.section`
 `;
 
 export const MembersContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   z-index: 2;
 
   justify-content: center;
   margin-top: 5px;
 
   @media (max-width: 830px) {
+    display: flex;
     flex-direction: column;
   }
 `;

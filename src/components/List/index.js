@@ -19,22 +19,20 @@ const ListComponent = ({ local, flag, lastUpdate, info = {} }) => (
         <span>CASOS CONFIRMADOS</span>
       </Item>
 
-      <Item>
+      {/* <Item>
         <p style={{ color: '#eac822' }}>{info.suspects}</p>
         <span>SUSPEITOS</span>
-      </Item>
+      </Item> */}
 
       <Item>
         <p style={{ color: '#d51616' }}>{info.deaths}</p>
         <span>ÓBITOS</span>
       </Item>
 
-      {info.recovered && (
-        <Item>
-          <p style={{ color: '#1678d5' }}>{info.refuses}</p>
-          <span>CURADOS</span>
-        </Item>
-      )}
+      {/* <Item>
+        <p style={{ color: '#1678d5' }}>{info.recovered}</p>
+        <span>CURADOS</span>
+      </Item> */}
     </ItemsContainer>
 
     <p style={{ fontSize: '1.5rem' }}>
@@ -60,7 +58,7 @@ ListComponent.propTypes = {
     confirmed: PropTypes.string,
     suspects: PropTypes.string,
     deaths: PropTypes.string,
-    refuses: PropTypes.string,
+    recovered: PropTypes.string,
   }).isRequired,
 };
 
