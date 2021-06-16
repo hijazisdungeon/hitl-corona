@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "www.covidagora.site",
+  "alias": "covidagora.hitechline.com.br",
   "name": "corona",
   "env": {
     "NODE_ENV": "production"
