@@ -1,7 +1,7 @@
 [build]
   command   = "next build && next-on-netlify"
-  functions = "out_functions"
-  publish   = "out_publish"
+  functions = "__next_functions"
+  publish   = "__next_publish"
 
 [[plugins]]
   package = "netlify-plugin-image-optim"
@@ -10,7 +10,7 @@
   package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
-    baseUrl = "https://covidagora.site/"
+    baseUrl = "https://covidagora.hitechline.com.br"
     sitemapPath = "/sitemap.xml"
     providers = [
       "google"
