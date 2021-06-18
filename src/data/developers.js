@@ -5,6 +5,7 @@ export default {
   },
   pablo1v: {
     username: 'Pablo Vinícius',
+    instagram: 'https://www.instagram.com/pablonev/',
     discordLink: 'https://discord.com/users/606909018861994026',
   },
   marcelloraber: {
