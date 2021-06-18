@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Head from '~/components/Head';
-import List from '~/components/List';
-import Layout from '~/layouts/Information';
-import api from '~/services/api';
+import { Head } from '~/components/Head';
+import { List } from '~/components/List';
+import { InformationLayout } from '~/layouts/Information';
+import { api } from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
-const WorldPage = ({ info }) => (
+const World = ({ info }) => (
   <>
     <Head
       title="Covid Agora | Mundo"
@@ -15,18 +15,18 @@ const WorldPage = ({ info }) => (
       image="static/images/world/flag.png"
     />
 
-    <Layout loading={!info}>
+    <InformationLayout loading={!info}>
       <List
         local="World"
         flag="/static/images/world/flag.png"
         lastUpdate={info && info.updated_at}
         info={info}
       />
-    </Layout>
+    </InformationLayout>
   </>
 );
 
-WorldPage.getInitialProps = async () => {
+World.getInitialProps = async () => {
   const { data } = await api.get('countries').then(r => r.data);
 
   return {
@@ -44,7 +44,7 @@ WorldPage.getInitialProps = async () => {
   };
 };
 
-WorldPage.propTypes = {
+World.propTypes = {
   info: PropTypes.shape({
     cases: PropTypes.string,
     confirmed: PropTypes.string,
@@ -54,4 +54,4 @@ WorldPage.propTypes = {
   }).isRequired,
 };
 
-export default WorldPage;
+export default World;

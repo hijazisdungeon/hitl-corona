@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Head from '~/components/Head';
-import Layout from '~/layouts/Default';
+import { Head } from '~/components/Head';
+import { DefaulLayout } from '~/layouts/Default';
 import { Container } from '~/styles/pages/privacy-policy';
 
-const PrivacyPolicyPage = () => (
+const PrivacyPolicy = () => (
   <>
     <Head title="Covid Agora | Política de Privacidade" />
 
-    <Layout>
+    <DefaulLayout>
       <Container>
         <h1> Política de Privacidade </h1>
 
@@ -119,8 +119,8 @@ const PrivacyPolicyPage = () => (
           </li>
         </ol>
       </Container>
-    </Layout>
+    </DefaulLayout>
   </>
 );
 
-export default PrivacyPolicyPage;
+export default PrivacyPolicy;

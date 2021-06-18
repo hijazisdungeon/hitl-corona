@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Link from '~/components/Link';
+import { Link } from '~/components/Link';
 
 export const Container = styled.section`
   height: 100vh;

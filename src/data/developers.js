@@ -1,4 +1,4 @@
-export default {
+export const developers = {
   devhijazi: {
     username: 'Gabriel Hijazi',
     instagram: 'https://www.instagram.com/hijazi_gabriel/',

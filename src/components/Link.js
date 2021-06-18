@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const defaultProps = [
   'href',
@@ -11,7 +10,7 @@ const defaultProps = [
   'scroll',
 ];
 
-const LinkComponent = ({ children, ...rest }) => {
+export const Link = ({ children, ...rest }) => {
   const nextLinkProps = defaultProps.reduce(
     (obj, prop) => Object.assign(obj, { [prop]: rest[prop] }),
     {},
@@ -26,8 +25,6 @@ const LinkComponent = ({ children, ...rest }) => {
   );
 };
 
-LinkComponent.propTypes = {
+Link.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default LinkComponent;

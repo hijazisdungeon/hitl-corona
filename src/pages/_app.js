@@ -1,9 +1,8 @@
 import App from 'next/app';
 import Head from 'next/head';
-import React from 'react';
 
-import Theme from '~/components/Theme';
-import GlobalStyle from '~/styles/global';
+import { ThemeProvider } from '~/components/Theme';
+import { GlobalStyle } from '~/styles/GlobalStyle';
 
 class MyApp extends App {
   render() {
@@ -16,11 +15,11 @@ class MyApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
 
-        <Theme>
+        <ThemeProvider>
           <GlobalStyle />
 
           <Component {...pageProps} />
-        </Theme>
+        </ThemeProvider>
       </>
     );
   }

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaGithub, FaDiscord, FaInstagram } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 
-import Head from '~/components/Head';
-import Link from '~/components/Link';
-import Slider from '~/components/Slider';
-import developers from '~/data/developers';
-import Layout from '~/layouts/Default';
+import { Head } from '~/components/Head';
+import { Link } from '~/components/Link';
+import { Slider } from '~/components/Slider';
+import { developers } from '~/data/developers';
+import { DefaulLayout } from '~/layouts/Default';
 import { githubApi } from '~/services/api';
 import {
   Container,
@@ -17,7 +17,7 @@ import {
   BrandsContainer,
 } from '~/styles/pages/aboutus';
 
-const AboutUsPage = () => {
+const AboutUs = () => {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const AboutUsPage = () => {
         <meta name="twitter:image:height" content="620" />
       </Head>
 
-      <Layout loading={!members.length}>
+      <DefaulLayout loading={!members.length}>
         <Container>
           <Content>
             <Slider
@@ -123,9 +123,9 @@ const AboutUsPage = () => {
             </MembersContainer>
           </Section>
         </Container>
-      </Layout>
+      </DefaulLayout>
     </>
   );
 };
 
-export default AboutUsPage;
+export default AboutUs;

@@ -1,8 +1,6 @@
-import React from 'react';
-
 import { Container, NewsContainer, Item } from './styles';
 
-const NewsComponent = () => (
+export const News = () => (
   <Container>
     <NewsContainer>
       <Item>
@@ -20,5 +18,3 @@ const NewsComponent = () => (
     </NewsContainer>
   </Container>
 );
-
-export default NewsComponent;

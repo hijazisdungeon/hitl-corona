@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 
 import { Container } from './styles';
 
-const SwitchComponent = ({ isChecked, onClick, ...rest }) => (
+export const Switch = ({ isChecked, onClick, ...rest }) => (
   <Container active={isChecked} {...rest}>
     <button type="button" onClick={onClick}>
       <span />
@@ -11,13 +10,11 @@ const SwitchComponent = ({ isChecked, onClick, ...rest }) => (
   </Container>
 );
 
-SwitchComponent.propTypes = {
+Switch.propTypes = {
   isChecked: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };
 
-SwitchComponent.defaultProps = {
+Switch.defaultProps = {
   isChecked: false,
 };
-
-export default React.memo(SwitchComponent);

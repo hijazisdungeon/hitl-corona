@@ -1,9 +1,7 @@
-import React from 'react';
-
-import Link from '../Link';
+import { Link } from '../Link';
 import { Container, Content, Navigation, NavigationItem } from './styles';
 
-const FooterComponent = () => (
+export const Footer = () => (
   <Container>
     <div>
       <Navigation>
@@ -69,5 +67,3 @@ const FooterComponent = () => (
     </div>
   </Container>
 );
-
-export default FooterComponent;

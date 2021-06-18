@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { createContext, useEffect, useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import * as themes from '~/config/themes';
 
@@ -14,7 +14,7 @@ export const ThemeContext = createContext({
   changeTheme: () => {},
 });
 
-const ThemeComponent = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(light);
 
   function changeTheme() {
@@ -45,13 +45,11 @@ const ThemeComponent = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, changeTheme }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );
 };
 
-ThemeComponent.propTypes = {
+ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default React.memo(ThemeComponent);

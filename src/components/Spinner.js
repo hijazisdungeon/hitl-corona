@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const SpinnerComponent = ({ color = '#0353a4' }) => <Container color={color} />;
+export const Spinner = ({ color = '#0353a4' }) => <Container color={color} />;
 
 const spinnerAnimation = keyframes`
   0% {
@@ -26,12 +25,10 @@ const Container = styled.div`
   animation: ${spinnerAnimation} 1s linear infinite;
 `;
 
-SpinnerComponent.propTypes = {
+Spinner.propTypes = {
   color: PropTypes.string,
 };
 
-SpinnerComponent.defaultProps = {
+Spinner.defaultProps = {
   color: '#0353a4',
 };
-
-export default SpinnerComponent;

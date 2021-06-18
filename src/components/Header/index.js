@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FiSettings, FiX } from 'react-icons/fi';
 
-import Link from '../Link';
-import Switch from '../Switch';
+import { Link } from '../Link';
+import { Switch } from '../Switch';
 import {
   Container,
   BrandsContainer,
@@ -14,9 +14,9 @@ import {
   Navigation,
 } from './styles';
 
-import useTheme from '~/hooks/useTheme';
+import { useTheme } from '~/hooks/useTheme';
 
-const HeaderComponent = () => {
+export const Header = () => {
   const { theme, changeTheme } = useTheme();
   const [navbarOpen, setnavbarOpened] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -90,5 +90,3 @@ const HeaderComponent = () => {
     </Container>
   );
 };
-
-export default React.memo(HeaderComponent);

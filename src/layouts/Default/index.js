@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { Main } from './styles';
 
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
-import Spinner from '~/components/Spinner';
+import { Footer } from '~/components/Footer';
+import { Header } from '~/components/Header';
+import { Spinner } from '~/components/Spinner';
 import { loadAnalytics } from '~/utils';
 
-const DefaulLayout = ({ children, loading }) => {
+export const DefaulLayout = ({ children, loading }) => {
   useEffect(() => {
     loadAnalytics();
   }, []);
@@ -32,5 +32,3 @@ DefaulLayout.propTypes = {
 DefaulLayout.defaultProps = {
   loading: false,
 };
-
-export default DefaulLayout;

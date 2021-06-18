@@ -1,17 +1,16 @@
 import Head from 'next/head';
-import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import Layout from '~/layouts/Default';
+import { DefaulLayout } from '~/layouts/Default';
 import { Container, Content, BackButton } from '~/styles/pages/404';
 
-const NotFoundPage = () => (
+const NotFound = () => (
   <>
     <Head>
       <title>Covid Agora | Nada Encontrado</title>
     </Head>
 
-    <Layout>
+    <DefaulLayout>
       <Container>
         <Content>
           <h1>404</h1>
@@ -22,8 +21,8 @@ const NotFoundPage = () => (
           </BackButton>
         </Content>
       </Container>
-    </Layout>
+    </DefaulLayout>
   </>
 );
 
-export default NotFoundPage;
+export default NotFound;

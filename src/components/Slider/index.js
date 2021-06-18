@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import { Container, Image } from './styles';
 
-const SliderComponent = ({ images }) => {
+export const Slider = ({ images }) => {
   const [selected, setSelected] = useState(0);
 
   const handleChange = useCallback(() => {
@@ -36,8 +36,6 @@ const SliderComponent = ({ images }) => {
   );
 };
 
-SliderComponent.propTypes = {
+Slider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
-
-export default SliderComponent;

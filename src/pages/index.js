@@ -1,10 +1,9 @@
-import React from 'react';
 import { FiArrowRight, FiArrowDown } from 'react-icons/fi';
 
-import Head from '~/components/Head';
-import Link from '~/components/Link';
-import Slider from '~/components/Slider';
-import Layout from '~/layouts/Default';
+import { Head } from '~/components/Head';
+import { Link } from '~/components/Link';
+import { Slider } from '~/components/Slider';
+import { DefaulLayout } from '~/layouts/Default';
 import {
   Container,
   Content,
@@ -14,13 +13,13 @@ import {
   Button,
 } from '~/styles/pages/index';
 
-const HomePage = () => (
+const Home = () => (
   <>
     <Head title="Covid Agora | Coronavírus em tempo real" image="icon.png">
       <meta name="robots" content="noodp" />
     </Head>
 
-    <Layout>
+    <DefaulLayout>
       <Container>
         <Content>
           <Slider
@@ -112,8 +111,8 @@ const HomePage = () => (
           </RowContainer>
         </Section>
       </Container>
-    </Layout>
+    </DefaulLayout>
   </>
 );
 
-export default HomePage;
+export default Home;

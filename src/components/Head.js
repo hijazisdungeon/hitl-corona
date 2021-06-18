@@ -1,6 +1,5 @@
 import NextHead from 'next/head';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const BASE_URL = base => {
   return !/^(https|http):\/\/+/.test(base)
@@ -8,7 +7,7 @@ const BASE_URL = base => {
     : base;
 };
 
-const HeadComponent = ({
+export const Head = ({
   title = 'Covid Agora',
   description,
   image,
@@ -56,7 +55,7 @@ const HeadComponent = ({
   </NextHead>
 );
 
-HeadComponent.propTypes = {
+Head.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -64,12 +63,10 @@ HeadComponent.propTypes = {
   children: PropTypes.node,
 };
 
-HeadComponent.defaultProps = {
+Head.defaultProps = {
   description:
     'Dados mundial, nacional e regional do coronavírus na palma da sua mão. Dados oficiais e atualizados em tempo real, garantindo a veracidade e a qualidade do serviço, entregando a melhor experiência ao usuário.',
   image: 'icon.png',
   url: '',
   children: null,
 };
-
-export default HeadComponent;

@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState, useCallback } from 'react';
 
-import Head from '~/components/Head';
-import List from '~/components/List';
-import Layout from '~/layouts/Information';
-import api from '~/services/api';
+import { Head } from '~/components/Head';
+import { List } from '~/components/List';
+import { InformationLayout } from '~/layouts/Information';
+import { api } from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
 const Country = () => {
@@ -47,7 +47,7 @@ const Country = () => {
         <meta name="robots" content="noindex" />
       </Head>
 
-      <Layout loading={!country}>
+      <InformationLayout loading={!country}>
         {country && (
           <List
             local={country.country}
@@ -56,7 +56,7 @@ const Country = () => {
             info={country}
           />
         )}
-      </Layout>
+      </InformationLayout>
     </>
   );
 };

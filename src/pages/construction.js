@@ -1,17 +1,16 @@
 import Head from 'next/head';
-import React from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import Layout from '~/layouts/Default';
+import { DefaulLayout } from '~/layouts/Default';
 import { Container, Content, BackButton } from '~/styles/pages/construction';
 
-const ConstructionPage = () => (
+const Construction = () => (
   <>
     <Head>
       <title>Covid Agora | Em Construção</title>
     </Head>
 
-    <Layout>
+    <DefaulLayout>
       <Container>
         <Content>
           <h1>EM BREVE !</h1>
@@ -25,8 +24,8 @@ const ConstructionPage = () => (
           </BackButton>
         </Content>
       </Container>
-    </Layout>
+    </DefaulLayout>
   </>
 );
 
-export default ConstructionPage;
+export default Construction;

@@ -1,10 +1,10 @@
 import { useEffect, useState, useCallback, useMemo } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import Head from '~/components/Head';
-import Link from '~/components/Link';
-import Layout from '~/layouts/Information';
-import api from '~/services/api';
+import { Head } from '~/components/Head';
+import { Link } from '~/components/Link';
+import { InformationLayout } from '~/layouts/Information';
+import { api } from '~/services/api';
 import {
   Container,
   SearchContainer,
@@ -49,7 +49,7 @@ const Countries = () => {
         description="Fique por dentro das estatisticas de cada país."
       />
 
-      <Layout loading={!countries.length}>
+      <InformationLayout loading={!countries.length}>
         <Container>
           <SearchContainer>
             <Input
@@ -88,7 +88,7 @@ const Countries = () => {
             </h1>
           )}
         </Container>
-      </Layout>
+      </InformationLayout>
     </>
   );
 };
