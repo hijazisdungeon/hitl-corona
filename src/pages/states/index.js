@@ -26,7 +26,7 @@ const States = () => {
     setSearchValue(value);
   }, []);
 
-  const getData = useCallback(async () => {
+  const getStates = useCallback(async () => {
     try {
       const {
         data: { data },
@@ -39,8 +39,8 @@ const States = () => {
   }, []);
 
   useEffect(() => {
-    getData();
-  }, [getData]);
+    getStates();
+  }, [getStates]);
 
   return (
     <>

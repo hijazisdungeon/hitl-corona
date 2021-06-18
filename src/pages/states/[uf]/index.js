@@ -14,7 +14,7 @@ const State = () => {
   } = useRouter();
   const [state, setStateValue] = useState(null);
 
-  const getData = useCallback(async () => {
+  const getState = useCallback(async () => {
     try {
       const stateData = await api.get(`brazil/uf/${uf}`).then(({ data }) => {
         if (data.error) {
@@ -37,8 +37,8 @@ const State = () => {
   }, [uf, back]);
 
   useEffect(() => {
-    getData();
-  }, [getData]);
+    getState();
+  }, [getState]);
 
   return (
     <>

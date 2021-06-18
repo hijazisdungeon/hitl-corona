@@ -14,7 +14,7 @@ const Country = () => {
   } = useRouter();
   const [country, setCountryValue] = useState(null);
 
-  const getData = useCallback(async () => {
+  const getCountry = useCallback(async () => {
     try {
       const countryData = await api
         .get(`/${countryName}`)
@@ -35,8 +35,8 @@ const Country = () => {
   }, [countryName, back]);
 
   useEffect(() => {
-    getData();
-  }, [getData]);
+    getCountry();
+  }, [getCountry]);
 
   return (
     <>

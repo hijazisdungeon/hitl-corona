@@ -26,7 +26,7 @@ const Countries = () => {
     setSearchValue(value);
   }, []);
 
-  const getData = useCallback(async () => {
+  const getCountries = useCallback(async () => {
     try {
       const {
         data: { data },
@@ -39,8 +39,8 @@ const Countries = () => {
   }, []);
 
   useEffect(() => {
-    getData();
-  }, [getData]);
+    getCountries();
+  }, [getCountries]);
 
   return (
     <>
