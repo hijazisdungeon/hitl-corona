@@ -124,35 +124,44 @@ export const Section = styled.section`
 
 export const MembersContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   z-index: 2;
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 20px auto 0 auto;
 
+  gap: 50px;
+  align-items: center;
   justify-content: center;
-  margin-top: 5px;
-
-  @media (max-width: 830px) {
-    display: flex;
-    flex-direction: column;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
 `;
 
 export const Row = styled.div`
   display: flex;
-  margin: 50px;
+  width: 100%;
   padding: 20px 40px;
 
   flex-direction: column;
   transition: transform 300ms;
+
   background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
 
   &:hover {
     transform: translateY(-2px);
   }
 
+  &,
+  img,
+  span {
+    border-radius: 8px;
+  }
+
   img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
+
+    border: 2px solid #e8e8e8;
   }
 
   span {
@@ -162,17 +171,8 @@ export const Row = styled.div`
     font-size: 1.8rem;
     font-weight: 600;
     background-color: #006daa;
-  }
 
-  @media (max-width: 830px) {
-    margin: 50px 0;
-  }
-
-  @media (max-width: 360px) {
-    img {
-      width: 150px;
-      height: 150px;
-    }
+    user-select: none;
   }
 `;
 
