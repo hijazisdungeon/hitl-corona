@@ -97,13 +97,16 @@ const AboutUsPage = () => {
                     >
                       <FaGithub color="#000" size="3.5rem" />
                     </a>
-                    <a
-                      href={member.discordLink}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <FaDiscord color="#7289DA" size="3.5rem" />
-                    </a>
+
+                    {member.discordLink && (
+                      <a
+                        href={member.discordLink}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <FaDiscord color="#7289DA" size="3.5rem" />
+                      </a>
+                    )}
 
                     {member.instagram && (
                       <a
