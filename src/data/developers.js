@@ -13,7 +13,7 @@ export const developers = {
     instagram: 'https://www.instagram.com/marcelloraber/',
   },
   zevdvlpr: {
-    username: 'Zevdvlpr',
+    username: 'Isaque',
     instagram: 'https://www.instagram.com/zevdvlpr/',
   },
   ahmedhijazi94: {
