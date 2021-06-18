@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Head } from '~/components/Head';
 import { DefaulLayout } from '~/layouts/Default';
 import { Container } from '~/styles/pages/privacy-policy';

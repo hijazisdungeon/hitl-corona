@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import * as themes from '~/config/themes';
