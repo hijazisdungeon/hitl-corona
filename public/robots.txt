@@ -5,5 +5,7 @@ Allow: /
 Disallow: /404
 Disallow: /tests
 Disallow: /construction
+Disallow: /states/*
+Disallow: /countries/*
 
-Sitemap: https://covidagora.site/sitemap.xml
+Sitemap: https://covidagora.hitechline.com.br/sitemap.xml
