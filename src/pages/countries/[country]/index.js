@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState, useCallback } from 'react';
 
 import Head from '~/components/Head';
 import List from '~/components/List';
@@ -7,54 +7,58 @@ import Layout from '~/layouts/Information';
 import api from '~/services/api';
 import { objectLocaleString } from '~/utils';
 
-const CountrieInformationPage = ({ country }) => (
-  <>
-    <Head
-      title={`Covid Agora | ${country.country}`}
-      description="Veja como anda o coronavírus no páis onde algum de seus familiares mora ou está."
-    />
+const Country = () => {
+  const {
+    back,
+    query: { country: countryName },
+  } = useRouter();
+  const [country, setCountryValue] = useState(null);
 
-    <Layout>
-      <List
-        local={country.country}
-        flag="/static/images/world/flag.png"
-        lastUpdate={country.updated_at}
-        info={country}
-      />
-    </Layout>
-  </>
-);
+  const getData = useCallback(async () => {
+    try {
+      const countryData = await api
+        .get(`/${countryName}`)
+        .then(({ data: { data } }) => {
+          if (data.error || !Object.keys(data).length) {
+            throw new Error('Ocorreu um erro ao obter os dados.');
+          }
 
-CountrieInformationPage.getInitialProps = async ({
-  query: { country },
-  res,
-}) => {
-  const back = () => {
-    res.writeHead(302, { Location: '/countries' });
-    res.end();
-  };
+          return objectLocaleString(data);
+        });
 
-  try {
-    const { data } = await api.get(`/${country}`).then(r => r.data);
-
-    if (data.error || !Object.keys(data).length) {
-      throw new Error('Ocorreu um erro ao obter os dados.');
+      setCountryValue(countryData);
+    } catch (error) {
+      if (typeof countryName === 'string') {
+        back();
+      }
     }
+  }, [countryName, back]);
 
-    return {
-      country: objectLocaleString(data),
-    };
-  } catch {
-    back();
-    return {};
-  }
+  useEffect(() => {
+    getData();
+  }, [getData]);
+
+  return (
+    <>
+      <Head
+        title={`Covid Agora | ${country?.country || 'Carregando...'}`}
+        description="Veja como anda o coronavírus no páis onde algum de seus familiares mora ou está."
+      >
+        <meta name="robots" content="noindex" />
+      </Head>
+
+      <Layout loading={!country}>
+        {country && (
+          <List
+            local={country.country}
+            flag="/static/images/world/flag.png"
+            lastUpdate={country.updated_at}
+            info={country}
+          />
+        )}
+      </Layout>
+    </>
+  );
 };
 
-CountrieInformationPage.propTypes = {
-  country: PropTypes.shape({
-    country: PropTypes.string,
-    updated_at: PropTypes.string,
-  }).isRequired,
-};
-
-export default CountrieInformationPage;
+export default Country;

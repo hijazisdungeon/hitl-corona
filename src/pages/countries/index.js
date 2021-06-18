@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, { useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import Head from '~/components/Head';
@@ -13,19 +12,35 @@ import {
   Content,
 } from '~/styles/pages/countries';
 
-const CountriesPage = ({ countries: allCountries }) => {
-  const [countries, setCountries] = useState(allCountries);
+const Countries = () => {
+  const [search, setSearchValue] = useState('');
+  const [countries, setCountries] = useState([]);
 
-  const handleInput = useCallback(
-    ({ target: { value } }) => {
-      const filteredCountries = allCountries.filter(({ country }) => {
-        return country.toLowerCase().includes((value || '').toLowerCase());
-      });
+  const leanCountries = useMemo(() => {
+    return countries.filter(({ country }) =>
+      country.toLowerCase().includes((search || '').toLowerCase()),
+    );
+  }, [search, countries]);
 
-      setCountries(filteredCountries);
-    },
-    [allCountries],
-  );
+  const handleInput = useCallback(({ target: { value } }) => {
+    setSearchValue(value);
+  }, []);
+
+  const getData = useCallback(async () => {
+    try {
+      const {
+        data: { data },
+      } = await api.get('countries');
+
+      setCountries(data.sort((a, b) => a.country.localeCompare(b.country)));
+    } catch (error) {
+      // Do nothing
+    }
+  }, []);
+
+  useEffect(() => {
+    getData();
+  }, [getData]);
 
   return (
     <>
@@ -34,7 +49,7 @@ const CountriesPage = ({ countries: allCountries }) => {
         description="Fique por dentro das estatisticas de cada país."
       />
 
-      <Layout loading={!countries}>
+      <Layout loading={!countries.length}>
         <Container>
           <SearchContainer>
             <Input
@@ -48,9 +63,9 @@ const CountriesPage = ({ countries: allCountries }) => {
             </span>
           </SearchContainer>
 
-          {countries && countries.length ? (
+          {leanCountries.length ? (
             <Content>
-              {countries.map(country => (
+              {leanCountries.map(country => (
                 <Link
                   key={country.country}
                   href="/countries/[country]"
@@ -78,18 +93,4 @@ const CountriesPage = ({ countries: allCountries }) => {
   );
 };
 
-CountriesPage.getInitialProps = async () => {
-  const { data } = await api.get('countries').then(r => r.data);
-
-  return { countries: data.sort((a, b) => a.country.localeCompare(b.country)) };
-};
-
-CountriesPage.propTypes = {
-  countries: PropTypes.arrayOf(
-    PropTypes.shape({
-      country: PropTypes.string,
-    }),
-  ).isRequired,
-};
-
-export default CountriesPage;
+export default Countries;
