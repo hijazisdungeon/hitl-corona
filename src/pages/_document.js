@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
 
           <meta name="theme-color" content="#006daa" />
-          <meta name="author" content="SweetCode Team" />
+          <meta name="author" content="Hitechline Team" />
 
           <link rel="icon" href="/favicon.png" />
 

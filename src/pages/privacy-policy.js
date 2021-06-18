@@ -92,7 +92,7 @@ const PrivacyPolicyPage = () => (
               </a>{' '}
               ou no repositório no{' '}
               <a
-                href="https://github.com/sweetcodeio"
+                href="https://github.com/hitechline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -109,7 +109,7 @@ const PrivacyPolicyPage = () => (
           <li>
             <h2>Atualização dessa politica</h2>
             <p>
-              A SweetCode responsável pela produção do site <b>Covid Agora</b>{' '}
+              A Hitechline responsável pela produção do site <b>Covid Agora</b>{' '}
               se compromete em atualizar esta política sempre que houver
               necessidade, assim garantimos segurança a todos os nossos usuários
               e visitantes e segurança própria por parte da equipe é essencial
