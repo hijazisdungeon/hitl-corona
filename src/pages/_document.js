@@ -5,6 +5,7 @@ class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 
+    // eslint-disable-next-line react/display-name
     const page = renderPage(Component => props => {
       return sheet.collectStyles(<Component {...props} />);
     });
