@@ -12,12 +12,12 @@ export const developers = {
     username: 'Marcello Raber',
     instagram: 'https://www.instagram.com/marcelloraber/',
   },
-  zevdvlpr: {
-    username: 'Isaque',
-    instagram: 'https://www.instagram.com/zevdvlpr/',
-  },
   ahmedhijazi94: {
     username: 'Ahmed Hijazi',
+    instagram: 'https://www.instagram.com/hijazitio/',
+  },
+  izakdvlpr: {
+    username: 'Isaque Lima',
     instagram: 'https://www.instagram.com/hijazitio/',
   },
 };

@@ -120,6 +120,10 @@ export const Section = styled.section`
       height: 60px;
     }
   }
+
+  p {
+    color: #000;
+  }
 `;
 
 export const MembersContainer = styled.div`

@@ -30,7 +30,7 @@ const Countries = () => {
     try {
       const {
         data: { data },
-      } = await api.get('countries');
+      } = await api.get('/countries');
 
       setCountries(data.sort((a, b) => a.country.localeCompare(b.country)));
     } catch (error) {

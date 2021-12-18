@@ -9,7 +9,7 @@ export const List = ({ local, flag, lastUpdate, info = {} }) => (
     <Header>
       <h1>COVID-19 ({local})</h1>
       <img src={flag} alt="Local Flag" />
-      <p>Dados oficais e atualizados em tempo real.</p>
+      <p>Dados oficiais e atualizados em tempo real.</p>
     </Header>
 
     <ItemsContainer>
@@ -18,20 +18,20 @@ export const List = ({ local, flag, lastUpdate, info = {} }) => (
         <span>CASOS CONFIRMADOS</span>
       </Item>
 
-      {/* <Item>
+      <Item>
         <p style={{ color: '#eac822' }}>{info.suspects}</p>
         <span>SUSPEITOS</span>
-      </Item> */}
+      </Item>
+
+      <Item>
+        <p style={{ color: '#1678d5' }}>{info.refuses}</p>
+        <span>CURADOS</span>
+      </Item>
 
       <Item>
         <p style={{ color: '#d51616' }}>{info.deaths}</p>
         <span>ÓBITOS</span>
       </Item>
-
-      {/* <Item>
-        <p style={{ color: '#1678d5' }}>{info.recovered}</p>
-        <span>CURADOS</span>
-      </Item> */}
     </ItemsContainer>
 
     <p style={{ fontSize: '1.5rem' }}>
@@ -41,10 +41,10 @@ export const List = ({ local, flag, lastUpdate, info = {} }) => (
       </strong>
     </p>
     <p style={{ fontSize: '1.3rem', margin: '25px' }}>
-      *Os números de <b>Suspeitos</b> & <b>Curados</b> foram removidos por
-      motivos desconhecidos do site do governo portanto nós da{' '}
-      <b>Covid Agora</b> achamos necessário remover os dados e atualizar o
-      site.*
+      *Os Alguns números podem estar errados ou desatualizados, pois a API que
+      nós consumidos por algum motivou parou de ser alimentada, nós
+      <b>Covid Agora</b> pedimos a compreensão de todos até que consigamos
+      solucionar o problema.*
     </p>
   </Container>
 );
@@ -57,7 +57,7 @@ List.propTypes = {
     confirmed: PropTypes.string,
     suspects: PropTypes.string,
     deaths: PropTypes.string,
-    recovered: PropTypes.string,
+    refuses: PropTypes.string,
   }).isRequired,
 };
 

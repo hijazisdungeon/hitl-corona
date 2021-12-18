@@ -24,6 +24,8 @@ const State = () => {
         return objectLocaleString({
           ...data,
           cases: data.suspects,
+          deaths: data.deaths,
+          cured: data.refuses,
           confirmed: data.cases,
         });
       });

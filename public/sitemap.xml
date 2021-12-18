@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://covidagora.site/</loc>
+    <loc>https://covidagora.hitechline.com.br/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://covidagora.site/world</loc>
+    <loc>https://covidagora.hitechline.com.br/world</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://covidagora.site/countries</loc>
+    <loc>https://covidagora.hitechline.com.br/countries</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://covidagora.site/states</loc>
+    <loc>https://covidagora.hitechline.com.br/states</loc>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://covidagora.site/news</loc>
+    <loc>https://covidagora.hitechline.com.br//news</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://covidagora.site/aboutus</loc>
+    <loc>https://covidagora.hitechline.com.br/aboutus</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://covidagora.site/privacy-policy</loc>
+    <loc>https://covidagora.hitechline.com.br/privacy-policy</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGithub, FaDiscord, FaInstagram } from 'react-icons/fa';
+// import { FaGithub, FaDiscord, FaInstagram } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 
 import { Head } from '~/components/Head';
@@ -12,9 +12,9 @@ import {
   Container,
   Content,
   Section,
-  MembersContainer,
-  Row,
-  BrandsContainer,
+  // MembersContainer,
+  // Row,
+  // BrandsContainer,
 } from '~/styles/pages/aboutus';
 
 const AboutUs = () => {
@@ -58,7 +58,7 @@ const AboutUs = () => {
 
             <div>
               <h1>
-                Hitech<span>line</span>
+                Hitech<span>line</span> Tecnologia
               </h1>
               <p>
                 Desenvolvedora oficial do <span>Covid Agora</span>
@@ -82,6 +82,8 @@ const AboutUs = () => {
               <h1>DESENVOLVEDORES</h1>
             </div>
 
+            <p>Sessão em manutenção, voltaremos o mais rápido possivel!</p>
+            {/* 
             <MembersContainer>
               {members.map(member => (
                 <Row key={member.id}>
@@ -120,7 +122,7 @@ const AboutUs = () => {
                   </BrandsContainer>
                 </Row>
               ))}
-            </MembersContainer>
+            </MembersContainer> */}
           </Section>
         </Container>
       </DefaulLayout>
